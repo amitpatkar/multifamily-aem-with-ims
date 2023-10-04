@@ -1,0 +1,161 @@
+<sly
+        data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+<div class="cmp-availability" data-cmp-component="availabilityfeed">
+    <div class="cmp-availability__title">
+        <h2><span class="large-title">Claim Your Space</span></h2>
+    </div>
+    <div class="cmp-availability__wrapper">
+        <div class="cmp-availability__filters">
+            <form
+                    class="cmp-form"
+                    id="availability-filters"
+                    name="availability-filters">
+                <div class="cmp cmp-options move-in-date">
+                    <fieldset class="form-group checkbox">
+                        <legend>MOVE-IN DATE</legend>
+                        <div class="checkbox-item checked">
+                            <label>
+                                <input type="checkbox" name="moveindate" value="today" checked>
+                                <span>TODAY</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-item">
+                            <label>
+                                <input type="checkbox" name="moveindate" value="nextmonth">
+                                <span >SEPT</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-item">
+                            <label>
+                                <input type="checkbox" name="moveindate" value="next2month">
+                                <span>OCT</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-item">
+                            <label>
+                                <input type="checkbox" name="moveindate" value="anydate">
+                                <span>ANY</span>
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="cmp cmp-options home-type">
+                    <fieldset class="form-group checkbox">
+                        <legend>HOME TYPE</legend>
+                        <div class="checkbox-item">
+                            <label>
+                                <input type="checkbox" name="hometype" value="studio">
+                                <span>STUDIO</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-item">
+                            <label>
+                                <input type="checkbox" name="hometype" value="1bedroom">
+                                <span>1 BD</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-item">
+                            <label>
+                                <input type="checkbox" name="hometype" value="2bedroom+">
+                                <span>2+ BD</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-item">
+                            <label>
+                                <input type="checkbox" name="hometype" value="pent">
+                                <span>PH</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-item">
+                            <label>
+                                <input type="checkbox" name="hometype" value="town">
+                                <span>TH</span>
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="cmp cmp-options max-rent">
+                    <div class="form-group drop-down">
+                        <label for="availability-filter-max-rent">Max Rent</label>
+                        <select name="maxrent" id="availability-filter-max-rent" class="form-control">
+                            <option value="Infinity" selected>No Max Rent</option>
+                            <option value="1000">$1000</option>
+                            <option value="2000">$2000</option>
+                            <option value="3000">$3000</option>
+                            <option value="4000">$4000</option>
+                            <option value="5000">$5000</option>
+                            <option value="6000">$6000</option>
+                            <option value="7000">$7000</option>
+                            <option value="8000">$8000</option>
+                            <option value="9000">$9000</option>
+                            <option value="10000">$10000</option>
+                        </select>
+                    </div>
+                </div>
+                <button
+                        type="submit"
+                        id="availability_filter_submit"
+                        class="cmp-form-button btn btn-dark btn-submit"
+                        name="availabilityFilterSubmit">Refine Results</button>
+
+            </form>
+
+        </div>
+        <div class="cmp-availability__results">
+            <div class="cmp-availability__results_table">
+                <table id="availability-result-table">
+                    <caption class="visually-hidden">Availability Search Results</caption>
+                    <thead>
+                    <tr>
+                        <th scope="col" tabindex="0" class="sorting" data-sort-field="name">
+                            <span>floor plan</span>
+                        </th>
+                        <th scope="col" tabindex="0" class="sorting" data-sort-field="type">
+                            <span>bed | bath</span>
+                        </th>
+                        <th scope="col" tabindex="0" class="sorting" data-sort-field="area">
+                            <span>size</span>
+                        </th>
+                        <th scope="col" tabindex="0" class="sorting asc" data-sort-field="minRent">
+                            <span>rent</span>
+                        </th>
+                        <th scope="col">
+                            <span>availability</span>
+                        </th>
+                        <th scope="col">
+                            <span class="visually-hidden">view apartment</span>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="cmp-availability__results_list">
+                <div class="cmp-availability__results-sorting">
+                    <label for="availability-sort-field">Sort By</label>
+                    <select name="availability-sort-field" id="availability-sort-field">
+                        <option value="name" selected>Floor Plan</option>
+                        <option value="type">Bed | Bath</option>
+                        <option value="area">Size</option>
+                        <option value="minRent" selected>Rent</option>
+                    </select>
+                </div>
+                <ul id="availability-result-list"></ul>
+            </div>
+            <div class="cmp-availability__paginate cmp-availability__paginate--table"></div>
+            <div class="cmp-availability__paginate cmp-availability__paginate--list"></div>
+            <div class="cmp-availability__disclaimer">
+                <p class="legal-text">*Rent displayed is for the best-priced term. Rates vary by lease term and move-in date. Select “View Apartment” to see all other rate options.</p>
+            </div>
+        </div>
+        <div class="cmp-availability__emptyResults hidden">
+            <p>No Units Available</p>
+        </div>
+    </div>
+
+
+
+</div>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.title, classAppend='cmp-text'}"></sly>

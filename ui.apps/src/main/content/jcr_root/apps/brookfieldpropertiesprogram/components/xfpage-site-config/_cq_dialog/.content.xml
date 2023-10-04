@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Neighborhood"
+          sling:resourceType="cq/gui/components/authoring/dialog"
+          extraClientlibs="[cq.common.wcm,core.wcm.components.page.v2.editor,cq.wcm.msm.properties,granite.contexthub.configuration,cq.siteadmin.admin.properties]"
+          helpPath="https://www.adobe.com/go/aem_cmp_page_v2"
+          mode="edit">
+    <content
+        granite:class="cq-dialog-content-page"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                granite:class="cq-siteadmin-admin-properties-tabs"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                size="L">
+                <items
+                    jcr:primaryType="nt:unstructured"
+                    sling:hideChildren="[thumbnail,advanced,pwa,cloudservices,permissions,personalization,socialmedia]">
+                    <brand
+                        cq:showOnCreate="{Boolean}true"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Brand"
+                        sling:orderBefore="cloudservices"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">         
+                            <section
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Details"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <theme
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Theme"
+                                        name="./theme">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured" cq-msm-lockable="./theme"/>
+                                    </theme>
+                                    <activeVariation
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Active Variation"
+                                        name="./activeVariation"> 
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured" cq-msm-lockable="./activeVariation"/>
+                                    </activeVariation>      
+                                </items>
+                            </section>
+                        </items>
+                    </brand> 
+                    <commonContentBlocks
+                        cq:showOnCreate="{Boolean}true"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Common Content Blocks"
+                        sling:orderBefore="cloudservices"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">         
+                            <section
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Details"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <getInTouch
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                        fieldLabel="Get In Touch"
+                                        name="./getInTouch">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured" cq-msm-lockable="./getInTouch"/>
+                                    </getInTouch>
+                                </items>
+                            </section>
+                        </items>
+                    </commonContentBlocks> 
+                    <navigation
+                        cq:showOnCreate="{Boolean}true"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Navigation"
+                        sling:orderBefore="cloudservices"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">         
+                            <section
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Links"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <featuresAmenities
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        fieldDescription="Check to disable layout selection in edit dialog."
+                                        name="./feature_disable_amenities"
+                                        text="Disable Features&amp; Amenities"
+                                        checked="{Boolean}false"
+                                        uncheckedValue="false"
+                                        value="true">   
+                                         <granite:data
+                                             jcr:primaryType="nt:unstructured" cq-msm-lockable="./feature_disable_amenities"/>
+                                    </featuresAmenities>
+                                    <featuresAmenitiesTypeHint
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                        ignoreData="{Boolean}true"
+                                        name="./feature_disable_amenities@TypeHint"
+                                        value="Boolean"/>
+                                    <neighborhood
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        fieldDescription="Check to disable layout selection in edit dialog."
+                                        fieldLabel="Neighborhood"
+                                        name="./feature_disable_neighborhood" 
+                                        text="Disable Neighborhood"
+                                        checked="{Boolean}false"
+                                        uncheckedValue="false"
+                                        value="true"> 
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured" cq-msm-lockable="./feature_disable_neighborhood"/>
+                                    </neighborhood>
+                                    <feature_disable_neighborhoodTypeHint
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                        ignoreData="{Boolean}true"
+                                        name="./feature_disable_neighborhood@TypeHint"
+                                        value="Boolean"/>                                   
+                                </items>
+                            </section>
+                        </items>
+                    </navigation> 
+                    <footer
+                        cq:showOnCreate="{Boolean}true"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Footer"
+                        sling:orderBefore="cloudservices"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">         
+                            <section
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Footer CTA"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <heading
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Heading"
+                                        name="./footer_cta_heading">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured" cq-msm-lockable="./footer_cta_heading"/>
+                                    </heading>
+                                    <label
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Label"
+                                        name="./footer_cta_label">
+                                         <granite:data
+                                             jcr:primaryType="nt:unstructured" cq-msm-lockable="./footer_cta_label"/>
+                                    </label>
+                                    <url
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"                                                            
+                                        fieldLabel="URL"
+                                        name="./footer_cta_url">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured" cq-msm-lockable="./footer_cta_url"/>
+                                    </url>  
+                                    <openInNewTab
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        uncheckedValue="false"
+                                        value="true"
+                                        text="Open Menu Link in new tab"
+                                        name="./footer_cta_openLinkInNewTab">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured" cq-msm-lockable="./footer_cta_openLinkInNewTab"/>
+                                    </openInNewTab>      
+                                </items>
+                            </section>
+                        </items>
+                    </footer> 
+                    <analytics
+                        cq:showOnCreate="{Boolean}true"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Analytics"
+                        sling:orderBefore="cloudservices"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">         
+                            <section
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Report Suites"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <headline
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Report Suite Base Name"
+                                        value="brookfieldpropertiesportfolio"
+                                        name="./reportSuiteBaseName"/>                                                
+                                </items>
+                            </section>
+                        </items>
+                    </analytics>                                              
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

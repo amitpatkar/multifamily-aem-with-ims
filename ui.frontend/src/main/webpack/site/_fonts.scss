@@ -1,0 +1,37 @@
+$cerebrisans-font-path :'/etc.clientlibs//brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/fonts/Cerebri-Sans';
+@font-face {
+    font-family: 'CerebriSans';
+    src: url('#{$cerebrisans-font-path}/CerebriSans-Regular.woff2') format('woff2'),
+         url('#{$cerebrisans-font-path}/CerebriSans-Regular.woff') format('woff'),
+         url('#{$cerebrisans-font-path}/CerebriSans-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'CerebriSans-Light';
+    src: url('#{$cerebrisans-font-path}/CerebriSans-Light.woff2') format('woff2'),
+         url('#{$cerebrisans-font-path}/CerebriSans-Light.woff') format('woff'),
+         url('#{$cerebrisans-font-path}/CerebriSans-Light.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'CerebriSans-Medium';
+    src: url('#{$cerebrisans-font-path}/CerebriSans-Medium.woff2') format('woff2'),
+         url('#{$cerebrisans-font-path}/CerebriSans-Medium.woff') format('woff'),
+         url('#{$cerebrisans-font-path}/CerebriSans-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'CerebriSans-Bold';
+    src: url('#{$cerebrisans-font-path}/CerebriSans-Bold.woff2') format('woff2'),
+         url('#{$cerebrisans-font-path}/CerebriSans-Bold.woff') format('woff'),
+         url('#{$cerebrisans-font-path}/CerebriSans-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}

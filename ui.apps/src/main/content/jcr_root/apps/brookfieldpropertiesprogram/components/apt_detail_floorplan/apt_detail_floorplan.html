@@ -1,0 +1,12 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" 
+     data-sly-use.cta="com.brookfieldpropertiesprogram.core.models.NavigationLink"
+     data-sly-use.ctas="com.brookfieldpropertiesprogram.core.models.NavigationRequestModel"
+     >
+    <div class="cmp-apartmentDetail__floorplan--large">
+        <img src="{{floorPlan.large.src}}" alt="floorplan of {{category}}"/>
+    </div>
+    <div class="cmp-apartmentDetail__floorplan--small">
+        <img src="{{floorPlan.small.src}}" alt="street map of {{category}}"/>
+    </div>
+</sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.text, classAppend='cmp-text'}"></sly>

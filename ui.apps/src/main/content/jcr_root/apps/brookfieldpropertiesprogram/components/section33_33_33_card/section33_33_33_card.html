@@ -1,0 +1,14 @@
+<div data-sly-use.templates="core/wcm/components/commons/v1/templates.html" 
+     data-sly-use.cta="com.brookfieldpropertiesprogram.core.models.NavigationLink"
+     data-sly-use.ctas="com.brookfieldpropertiesprogram.core.models.NavigationRequestModel"
+     class="cmp-section33__cardContent">
+    <img data-sly-test="${properties.patternImagePath}" class="cmp-section33__pattern" src="${properties.patternImagePath @context='uri'}" alt="image alt">
+    <img data-sly-test="${properties.patternImagePath && properties.bgImagePath}" class="cmp-section33__logo" src="${properties.bgImagePath @context='uri'}" alt="${properties.bgImageLabel}">    
+    <img data-sly-test="${!properties.patternImagePath && properties.bgImagePath}" src="${properties.bgImagePath @context='uri'}" alt="${properties.bgImageLabel}">
+    ${properties.text @context='html'}    
+    
+    <a data-sly-repeat.cta="${ctas.componentModel.menuLinks}" href="${cta.absUrl  @context='uri'}" class="${cta.cssClass @context='attribute'} ${cta.btnType  @context='attribute'}">
+        ${cta.label}
+    </a>
+</div>    
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.text, classAppend='cmp-text'}"></sly>

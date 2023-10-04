@@ -1,0 +1,165 @@
+.cmp-form-options {}
+.cmp-form-options__legend {}
+.cmp-form-options__field-label {}
+.cmp-form-options__field {}
+.cmp-form-options__field--checkbox {}
+.cmp-form-options__field--radio {}
+.cmp-form-options__field-description {}
+.cmp-form-options__label {}
+.cmp-form-options__drop-down-field {}
+.cmp-form-options__multi-drop-down-field {}
+.cmp-form-options__help-message {}
+
+.cmp-options {
+    fieldset {
+        padding: 0;
+        border: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        legend {
+            width: 100%;
+            margin-bottom: 10px;
+            @include form-label;
+            @include breakpoint-up(desktop) { 
+                margin-bottom: 14px;
+            }
+        }
+        .checkbox-item, .radio-item {
+            height: 50px;
+            background: $black-5;
+            &:hover {
+                label span {
+                    border: 2px solid $black-50;
+                    text-decoration: none;
+                }
+            }
+            label {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: auto;
+                height: 50px;
+                cursor: pointer;
+                input, span, &::after {
+                    grid-column: 1;
+                    grid-row: 1;
+                    align-self: center;
+                    justify-self: center;
+                }
+                span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 84%;
+                    border: 2px solid transparent;
+                    border-radius: 2px;
+                    text-decoration: underline;
+                }
+                input[type="checkbox"],
+                input[type="radio"]{
+                   @include visuallyhidden;
+                   &:checked + span  {
+                        border: 2px solid $black-100;
+                        text-decoration: none;
+                   }
+                   &:focus+ span  {
+                        border: 2px solid $black-100;
+                    }
+    
+                }
+
+            }
+        }
+
+    }
+
+    &.move-in-date {
+        fieldset {
+            .checkbox-item, .radio-item {
+                width: 25%;
+                &:nth-of-type(1) {
+                    border-radius: 6px 0 0 6px;
+                    padding-left: 4px;
+                }
+                &:nth-of-type(4) {
+                    border-radius: 0 6px 6px 0;
+                    padding-right: 4px;
+                }
+                &:nth-of-type(2),
+                &:nth-of-type(3),
+                &:nth-of-type(4){
+                    label::after {
+                        content: '';
+                        width: 98%;
+                        height: 40%;
+                        border-left: 2px solid $white-100;
+                        background: transparent;
+
+                    }
+                    &:hover {
+                        label::after {
+                            border-left: none;
+                        }
+                    }
+                }
+                &.checked {
+                    label::after {
+                        border-left: none;
+                    }
+                }
+            }
+
+        }
+    }
+    &.home-type {
+        fieldset {
+            .checkbox-item {
+                &:nth-of-type(1),
+                &:nth-of-type(4) {
+                    border-radius: 6px 0 0 6px;
+                    padding-left: 4px;
+                }
+                &:nth-of-type(3),
+                &:nth-of-type(5) {
+                    border-radius: 0 6px 6px 0;
+                    padding-right: 4px;
+                }
+                &:nth-of-type(2),
+                &:nth-of-type(3),
+                &:nth-of-type(5){
+                    label::after {
+                        content: '';
+                        width: 99%;
+                        height: 40%;
+                        border-left: 2px solid $white-100;
+                        background: transparent;
+                    }
+                    &:hover {
+                        label::after {
+                            border-left: none;
+                        }
+                    }
+                }
+                &.checked {
+                    label::after {
+                        border-left: none;
+                    }
+                }
+            }
+        }
+    }
+    &.max-rent {
+        .drop-down {
+            label{
+                display: block;
+                margin-bottom: 10px;
+                @include form-label;
+                @include breakpoint-up(desktop) { 
+                    margin-bottom: 14px;
+                }
+            }
+        }
+
+    }
+}

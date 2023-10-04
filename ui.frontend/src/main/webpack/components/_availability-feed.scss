@@ -1,0 +1,289 @@
+.cmp-availability {
+    color: $black-100;
+    padding: 45px $padding-small;
+    @include breakpoint-up(desktop) { 
+        padding: 0;
+        position: relative;
+    }
+    &__wrapper {
+        padding: 0;
+        @include breakpoint-up(desktop) { 
+            padding: 30px $padding-large;
+        }
+
+    }
+    #availability-filters {
+        @include breakpoint-up(desktop) {
+            padding-bottom: 80px;
+            border-bottom: 2px solid $black-10;
+            display: grid;
+            grid-template-columns: 1fr 1.3fr 0.55fr;
+            grid-column-gap: 50px;
+            grid-template-rows: auto auto;
+        }
+        @include breakpoint-between('1025px', '1366px'){
+            grid-column-gap: 30px;
+        }
+        .cmp-options {
+            &.move-in-date,
+            &.home-type,
+            &.max-rent {
+                @include breakpoint-down(tablet) {
+                    margin-top: 30px;
+                }
+            }
+            &.move-in-date {
+                @include breakpoint-up(desktop) { 
+                    grid-column: 1/2;
+                    grid-row: 1;
+                }
+            }
+            &.home-type {
+                @include breakpoint-up(desktop) { 
+                    grid-column: 2/3;
+                    grid-row: 1;
+                }
+                fieldset {
+                    .checkbox-item {
+                        width: 25%;
+                        &:nth-of-type(-n+3) {
+                            @include breakpoint-down(tablet){
+                                margin-bottom: 10px;
+                            }
+                        }
+
+                        @include breakpoint-up(desktop) {
+                            width: 19.2%;
+                        }
+                        &:nth-of-type(3) {
+                            margin-right: 50px;
+                            @include breakpoint-up(desktop) {
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.max-rent {
+                select {
+                    @include form-select;
+                }
+                @include breakpoint-up(desktop) { 
+                    grid-column: 3/4;
+                    grid-row: 1;
+                }
+            }
+        }
+        button.cmp-form-button {
+            @include breakpoint-down(tablet) {
+                margin: 45px 0 60px;
+                width: 100%;
+            }
+            @include breakpoint-up(desktop) { 
+                grid-column: 1/4;
+                justify-self: center;
+                grid-row: 2;
+                margin: 48px 0 0;
+            }
+
+        }
+
+
+    }
+    #availability-result-table {
+
+        @include breakpoint-up(desktop) { 
+            width: 100%;
+            tr {
+                border-bottom: 2px solid $black-10;
+                th {
+                    text-align: left;
+                    text-transform: uppercase;
+                    &:not(:last-of-type){
+                        padding: 15px 35px 15px 0;
+                    }
+                    &:last-of-type {
+                        padding: 15px 0;
+                    }
+                    &.sorting {
+                        cursor: pointer;
+                        &:after {
+                            content: url($sort-arrows);
+                            display: inline-block;
+                            vertical-align: middle;
+                            margin-left: 10px;
+                        }
+                        &.asc{
+                            &:after {
+                                content: url($sort-arrows-asc);
+                            }
+                        }
+                        &.desc{
+                            &:after {
+                                content: url($sort-arrows-desc);
+                            }
+                        }
+                    }
+                    &[data-sort-field="type"] {
+                        min-width: 142px;
+                    }
+                    &[data-sort-field="area"] {
+                        min-width: 95px;
+                    }
+                    &[data-sort-field="name"] {
+                        width: 25%;
+                    }
+                }
+                td {
+                    height: 132px;
+                    &:not(:last-of-type){
+                        padding: 10px 35px 10px 0;
+                    }
+                    &:last-of-type {
+                        padding: 10px 0;
+                    }
+                    &:last-child {
+                        width: 202px;
+                    }
+                }
+            }
+        }
+    }
+    &__title {
+        width: 100%;
+        @include large-title;
+        color: inherit;
+        background: transparent;
+        @include breakpoint-up(desktop) { 
+            position: absolute;
+            top: -80px;
+            >h2 {
+                height: 81px;
+                background: $white-100;
+                width: 75%;
+                padding: 18px 2.86% 0;
+                margin: 0 auto;
+                background: $white-100;
+            }
+        }
+
+    }
+    &__results{
+        color: $black-100;
+        padding: 15px 0 0;
+        @include breakpoint-up(desktop) { 
+            padding: 50px 0 0;
+        }
+    }
+    .cmp-availability__results_table,
+    .cmp-availability__paginate--table {
+        @include breakpoint-down(tablet) { 
+            display: none;
+        }
+    }
+    .cmp-availability__results_list,
+    .cmp-availability__paginate--list {
+        @include breakpoint-up(desktop) { 
+            display: none;
+        }
+    }
+    #availability-result-list {
+        .cmp-availability__resultCard {
+            @include breakpoint-down(tablet) { 
+                padding: 45px 0;
+                border-top: 2px solid $black-10;
+                &:last-of-type{
+                    border-bottom: 2px solid $black-10;
+                }
+                p {
+                    line-height: $lh-l;
+                    &:nth-of-type(1) {
+                        margin-top: 5px;
+                    }
+                    &:nth-of-type(3) {
+                        margin-top: 10px;
+                    }
+                    &:nth-of-type(4) {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+    &__paginate {
+        @include breakpoint-up(desktop) { 
+            padding: 40px 0;
+            display: grid;
+            grid-template-columns: 25% 50% 25%;
+            grid-template-rows: auto;
+        }
+
+        &-status {
+            @include body-text;
+            @include breakpoint-down(tablet) { 
+                text-align: center;
+                padding: 45px 0 15px;
+            }
+            @include breakpoint-up(desktop) { 
+                grid-column: 1;
+                grid-row: 1;
+                justify-self: left;
+            }
+        }
+        &-buttons {
+            @include breakpoint-down(tablet) { 
+                padding: 15px 0 45px;
+            }
+            text-align: center;
+            @include breakpoint-up(desktop) { 
+                grid-column: 2/3;
+                grid-row: 1;
+            }
+        }
+        .paginate-button {
+            display: inline-block;
+            vertical-align: middle;
+            width: 30px;
+            height: 30px;
+            padding: 0;
+            background-color: transparent;
+            border: none;
+            @include body-text;
+            line-height: 1;
+            &:not(.current){
+                text-decoration: underline;
+            }
+            &.current {
+                background-color: $black-10;
+            }
+            &:not([tabindex="-1"]){
+                cursor: pointer;
+            }
+            &[tabindex="-1"] {
+                svg g {
+                    opacity: 0.2;
+                }
+            }
+        }
+    }
+    &__results-sorting {
+        margin-bottom: 30px;
+        label {
+            @include form-label;
+            display: block;
+            margin-bottom: 10px;
+        }
+        select {
+            @include form-select;
+        }
+    }
+    &__emptyResults {
+        padding: 50px 0;
+
+    }
+    &__disclaimer {
+        color: $black-70;
+        text-align:center;
+    }
+    
+}

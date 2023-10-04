@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+          jcr:mixinTypes="[rep:AccessControllable]"
+          jcr:primaryType="cq:Page">
+    <rep:policy/>
+    <brookfieldpropertiesprogram jcr:primaryType="nt:unstructured">
+        <components jcr:primaryType="nt:unstructured">
+            <form jcr:primaryType="nt:unstructured">
+                <container jcr:primaryType="nt:unstructured">
+                    <form-container
+                        jcr:description="Allows the form components to be dropped into this core form container."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Content Form"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/apps/brookfieldpropertiesprogram/components/form/button,/apps/brookfieldpropertiesprogram/components/form/hidden,/apps/brookfieldpropertiesprogram/components/form/options,/apps/brookfieldpropertiesprogram/components/form/text]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </form-container>
+                </container>
+            </form>
+            <languagenavigation jcr:primaryType="nt:unstructured">
+                <policy_xfm
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="BROOKFIELD PROPERTIES Program Language Navigation - Experience Fragment"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    navigationRoot="/content/brookfieldpropertiesprogram"
+                    structureDepth="1">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_xfm>
+            </languagenavigation>
+            <image jcr:primaryType="nt:unstructured">
+                <policy_651483963895698
+                    jcr:description="- Enable lazy loading for faster page loading.&#xd;&#xa;- Define allowed image widths for automatic loading of the image in the most optimal resolution, given the size at which each image is displayed on the page, and the visitor's pixel density.&#xd;&#xa;- Disallow direct asset upload, to force authors to first upload the images to Assets."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Content Image"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    allowedRenditionWidths="[320,480,600,800,1024,1200,1600]"
+                    disableLazyLoading="false"
+                    allowUpload="false"
+                    altValueFromDAM="true"
+                    displayPopupTitle="true"
+                    isDecorative="false"
+                    jpegQuality="{Long}85"
+                    titleValueFromDAM="true"
+                    uuidDisabled="true">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <plugins jcr:primaryType="nt:unstructured">
+                        <crop
+                            jcr:primaryType="nt:unstructured"
+                            features="*">
+                            <aspectRatios jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    name="Wide Landscape"
+                                    ratio="0.6180"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    name="Landscape"
+                                    ratio="0.8284"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    name="Square"
+                                    ratio="1"/>
+                                <item3
+                                    jcr:primaryType="nt:unstructured"
+                                    name="Portrait"
+                                    ratio="1.6180"/>
+                            </aspectRatios>
+                        </crop>
+                        <rotate
+                            jcr:primaryType="nt:unstructured"
+                            features="right"/>
+                        <flip
+                            jcr:primaryType="nt:unstructured"
+                            features="-"/>
+                    </plugins>
+                </policy_651483963895698>
+            </image>
+            <text jcr:primaryType="nt:unstructured">
+                <policy_641562756958017
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Content Text"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <rtePlugins jcr:primaryType="nt:unstructured">
+                        <paraformat
+                            jcr:primaryType="nt:unstructured"
+                            features="*">
+                            <formats
+                                jcr:primaryType="nt:unstructured"
+                                override="true">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Paragraph"
+                                    tag="p"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Quote"
+                                    tag="blockquote"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Preformatted"
+                                    tag="pre"/>
+                            </formats>
+                        </paraformat>
+                        <misctools
+                            jcr:primaryType="nt:unstructured"
+                            features="-">
+                            <specialCharsConfig jcr:primaryType="nt:unstructured">
+                                <chars
+                                    jcr:primaryType="nt:unstructured"
+                                    override="true">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;copy;"
+                                        name="copyright"/>
+                                    <item1
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;euro;"
+                                        name="euro"/>
+                                    <item2
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;reg;"
+                                        name="registered"/>
+                                    <item3
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;trade;"
+                                        name="trademark"/>
+                                </chars>
+                            </specialCharsConfig>
+                        </misctools>
+                        <edit
+                            jcr:primaryType="nt:unstructured"
+                            features="-"/>
+                        <findreplace
+                            jcr:primaryType="nt:unstructured"
+                            features="-"/>
+                        <undo
+                            jcr:primaryType="nt:unstructured"
+                            features="-"/>
+                        <spellcheck
+                            jcr:primaryType="nt:unstructured"
+                            features="-"/>
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            features="-"/>
+                        <table
+                            jcr:primaryType="nt:unstructured"
+                            features="-"/>
+                        <lists
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <justify
+                            jcr:primaryType="nt:unstructured"
+                            features="-"/>
+                        <format
+                            jcr:primaryType="nt:unstructured"
+                            features="bold,italic"/>
+                        <links
+                            jcr:primaryType="nt:unstructured"
+                            features="modifylink,unlink"/>
+                        <subsuperscript
+                            jcr:primaryType="nt:unstructured"
+                            features="-"/>
+                    </rtePlugins>
+                </policy_641562756958017>
+            </text>
+            <section_base jcr:primaryType="nt:unstructured">
+                <policy_section_base
+                    jcr:description="Allows only H1 and disallows links for the main page title."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Section Base"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    allowedTypes="h1"
+                    linkDisabled="true"
+                    type="h1">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">      
+                        <item2
+                            cq:styleGroupLabel="Margin Top"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="mt-1"
+                                    cq:styleId="2000"
+                                    cq:styleLabel="1"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="mt-2"
+                                    cq:styleId="2001"
+                                    cq:styleLabel="2"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="mt-3"
+                                    cq:styleId="2002"
+                                    cq:styleLabel="3"
+                                    jcr:primaryType="nt:unstructured"/> 
+                                <item3
+                                    cq:styleClasses="mt-4"
+                                    cq:styleId="2004"
+                                    cq:styleLabel="4"
+                                    jcr:primaryType="nt:unstructured"/>   
+                                <item4
+                                    cq:styleClasses="mt-5"
+                                    cq:styleId="2005"
+                                    cq:styleLabel="5"
+                                    jcr:primaryType="nt:unstructured"/>           
+                            </cq:styles>
+                        </item2>
+                        <item3
+                            cq:styleGroupLabel="Margin Bottom"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="mb-1"
+                                    cq:styleId="2006"
+                                    cq:styleLabel="1"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="mb-2"
+                                    cq:styleId="2007"
+                                    cq:styleLabel="2"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="mb-3"
+                                    cq:styleId="2008"
+                                    cq:styleLabel="3"
+                                    jcr:primaryType="nt:unstructured"/> 
+                                <item3
+                                    cq:styleClasses="mb-4"
+                                    cq:styleId="2009"
+                                    cq:styleLabel="4"
+                                    jcr:primaryType="nt:unstructured"/>   
+                                <item4
+                                    cq:styleClasses="mb-5"
+                                    cq:styleId="2010"
+                                    cq:styleLabel="5"
+                                    jcr:primaryType="nt:unstructured"/>           
+                            </cq:styles>
+                        </item3>
+                    </cq:styleGroups>
+                </policy_section_base>                
+            </section_base>
+            <section_100 jcr:primaryType="nt:unstructured">
+                <policy_section_100
+                    jcr:description="Allows only H1 and disallows links for the main page title."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Section (100%)"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    allowedTypes="h1"
+                    linkDisabled="true"
+                    type="h1">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">      
+                        <item0
+                            cq:styleGroupLabel="Style"
+                            cq:styleGroupMultiple="false"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-section100--text"
+                                    cq:styleId="678000"
+                                    cq:styleLabel="Text"
+                                    jcr:primaryType="nt:unstructured"/>   
+                                <item1
+                                    cq:styleClasses="cmp-section100--visual"
+                                    cq:styleId="678001"
+                                    cq:styleLabel="Visual"
+                                    jcr:primaryType="nt:unstructured"/>                                                                                                                                              
+                            </cq:styles>
+                        </item0>                  
+                        <item1
+                            cq:styleGroupLabel="Content Type"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="lead-only"
+                                    cq:styleId="668000"
+                                    cq:styleLabel="lead-only"
+                                    jcr:primaryType="nt:unstructured"/> 
+                                <item1
+                                    cq:styleClasses="lead-n-copy"
+                                    cq:styleId="668001"
+                                    cq:styleLabel="lead-n-copy"
+                                    jcr:primaryType="nt:unstructured"/> 
+                                <item2
+                                    cq:styleClasses="lead-n-contacts"
+                                    cq:styleId="668002"
+                                    cq:styleLabel="lead-n-contacts"
+                                    jcr:primaryType="nt:unstructured"/>  
+                                <item3
+                                    cq:styleClasses="no-info"
+                                    cq:styleId="668003"
+                                    cq:styleLabel="Visual- no-info"
+                                    jcr:primaryType="nt:unstructured"/> 
+                                <item4
+                                    cq:styleClasses="info-left"
+                                    cq:styleId="668004"
+                                    cq:styleLabel="Visual - info-left"
+                                    jcr:primaryType="nt:unstructured"/> 
+                                <item5
+                                    cq:styleClasses="info-right"
+                                    cq:styleId="668005"
+                                    cq:styleLabel="Visual - info-right"
+                                    jcr:primaryType="nt:unstructured"/> 
+                                                                                                                                            
+                            </cq:styles>
+                        </item1>    
+                        <item2
+                            cq:styleGroupLabel="Margin Top"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="mgn-t-lg"
+                                    cq:styleId="2000"
+                                    cq:styleLabel="Large"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="mgn-t-md"
+                                    cq:styleId="2001"
+                                    cq:styleLabel="Medium"
+                                    jcr:primaryType="nt:unstructured"/>                                         
+                            </cq:styles>
+                        </item2>
+                        <item3
+                            cq:styleGroupLabel="Margin Right"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="mgn-r-lg"
+                                    cq:styleId="3000"
+                                    cq:styleLabel="Large"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="mgn-r-md"
+                                    cq:styleId="3001"
+                                    cq:styleLabel="Medium"
+                                    jcr:primaryType="nt:unstructured"/>                                       
+                            </cq:styles>
+                        </item3>  
+                        <item4
+                            cq:styleGroupLabel="Margin Bottom"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="mgn-b-lg"
+                                    cq:styleId="4000"
+                                    cq:styleLabel="Large"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="mgn-b-md"
+                                    cq:styleId="4001"
+                                    cq:styleLabel="Medium"
+                                    jcr:primaryType="nt:unstructured"/>                                         
+                            </cq:styles>
+                        </item4>
+                        <item5
+                            cq:styleGroupLabel="Margin Left"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="mgn-l-lg"
+                                    cq:styleId="5000"
+                                    cq:styleLabel="Large"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="mgn-l-md"
+                                    cq:styleId="5001"
+                                    cq:styleLabel="Medium"
+                                    jcr:primaryType="nt:unstructured"/>                                       
+                            </cq:styles>
+                        </item5>                                                                      
+                    </cq:styleGroups>
+                </policy_section_100>                
+            </section_100>
+            <hero jcr:primaryType="nt:unstructured">
+                <policy_hero
+                    jcr:description="Allows only H1 and disallows links for the main page title."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Hero"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    allowedTypes="h1"
+                    linkDisabled="true"
+                    type="h1">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">      
+                        <item0
+                            cq:styleGroupLabel="Style"
+                            cq:styleGroupMultiple="false"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-hero--title"
+                                    cq:styleId="8467799"
+                                    cq:styleLabel="Title"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-hero--logo"
+                                    cq:styleId="8467800"
+                                    cq:styleLabel="Logo"
+                                    jcr:primaryType="nt:unstructured"/>   
+                                <item2
+                                    cq:styleClasses="cmp-hero--cta"
+                                    cq:styleId="8467801"
+                                    cq:styleLabel="CTA"
+                                    jcr:primaryType="nt:unstructured"/>    
+                                <item3
+                                    cq:styleClasses="cmp-hero--short"
+                                    cq:styleId="8467802"
+                                    cq:styleLabel="Short"
+                                    jcr:primaryType="nt:unstructured"/>   
+                                <item4
+                                    cq:styleClasses="cmp-hero--virtualtour"
+                                    cq:styleId="8467803"
+                                    cq:styleLabel="Virtual Tour"
+                                    jcr:primaryType="nt:unstructured"/>   
+                                <item5
+                                    cq:styleClasses="cmp-hero--virtualtour-inplace"
+                                    cq:styleId="8467804"
+                                    cq:styleLabel="Virtual Tour In Place"
+                                    jcr:primaryType="nt:unstructured"/>
+                                                                                                                                                                                                  
+                            </cq:styles>
+                        </item0>                                                                                                                    
+                    </cq:styleGroups>
+                </policy_hero>                
+            </hero>
+            <apt_detail_section jcr:primaryType="nt:unstructured">
+                <policy_apt_detail_section
+                    jcr:description="Allows only H1 and disallows links for the main page title."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Apartment Detail"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    allowedTypes="h1"
+                    linkDisabled="true"
+                    type="h1">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">      
+                        <item0
+                            cq:styleGroupLabel="Style"
+                            cq:styleGroupMultiple="false"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-apartmentDetail--optionA"
+                                    cq:styleId="5671290001"
+                                    cq:styleLabel="Option A"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-apartmentDetail--optionB"
+                                    cq:styleId="5671290002"
+                                    cq:styleLabel="Option B"
+                                    jcr:primaryType="nt:unstructured"/>   
+                                <item2
+                                    cq:styleClasses="cmp-apartmentDetail--optionC"
+                                    cq:styleId="5671290003"
+                                    cq:styleLabel="Option C"
+                                    jcr:primaryType="nt:unstructured"/>                                                                                                                                                                                                                                      
+                            </cq:styles>
+                        </item0>                                                                                                                    
+                    </cq:styleGroups>
+                </policy_apt_detail_section>
+            </apt_detail_section>
+            <apt_detail_available jcr:primaryType="nt:unstructured">
+                <policy_apt_detail_available
+                    jcr:description="Allows only H1 and disallows links for the main page title."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Apartment Detail Available"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    allowedTypes="h1"
+                    linkDisabled="true"
+                    type="h1">
+                </policy_apt_detail_available>
+            </apt_detail_available>
+            <section33_33_33_card jcr:primaryType="nt:unstructured">
+                <policy_section33_33_33_card
+                    jcr:description="Allows only H1 and disallows links for the main page title."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Section 33-33-33 Card"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    allowedTypes="h1"
+                    linkDisabled="true"
+                    type="h1">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">      
+                        <item0
+                            cq:styleGroupLabel="Priority"
+                            cq:styleGroupMultiple="false"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="priority"
+                                    cq:styleId="4327944211"
+                                    cq:styleLabel="priority"
+                                    jcr:primaryType="nt:unstructured"/>                                                                                                                                                                                                                               
+                            </cq:styles>
+                        </item0>  
+                        <item1
+                            cq:styleGroupLabel="Column Style"
+                            cq:styleGroupMultiple="false"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-section33__card--empty33"
+                                    cq:styleId="5327944211"
+                                    cq:styleLabel="cmp-section33__card--empty33"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-section33__card--image33"
+                                    cq:styleId="5327944212"
+                                    cq:styleLabel="cmp-section33__card--image33"
+                                    jcr:primaryType="nt:unstructured"/>   
+                                <item2
+                                    cq:styleClasses="cmp-section33__card--text33"
+                                    cq:styleId="5327944213"
+                                    cq:styleLabel="cmp-section33__card--text33"
+                                    jcr:primaryType="nt:unstructured"/>    
+                                <item3
+                                    cq:styleClasses="cmp-section33__card--logo33"
+                                    cq:styleId="5327944214"
+                                    cq:styleLabel="cmp-section33__card--logo33"
+                                    jcr:primaryType="nt:unstructured"/>   
+                                <item4
+                                    cq:styleClasses="cmp-section33__card--cta33"
+                                    cq:styleId="5327944215"
+                                    cq:styleLabel="cmp-section33__card--cta33"
+                                    jcr:primaryType="nt:unstructured"/>   
+                                <item5
+                                    cq:styleClasses="cmp-section33__card--cta33-2"
+                                    cq:styleId="5327944216"
+                                    cq:styleLabel="cmp-section33__card--cta33-2"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item6
+                                    cq:styleClasses="cmp-section33__card--image66"
+                                    cq:styleId="5327944217"
+                                    cq:styleLabel="cmp-section33__card--image66"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item7
+                                    cq:styleClasses="cmp-section33__card--copy66"
+                                    cq:styleId="5327944219"
+                                    cq:styleLabel="cmp-section33__card--copy66"
+                                    jcr:primaryType="nt:unstructured"/>                                                                                                                                                                                                                          
+                            </cq:styles>
+                        </item1>                                                                                                                    
+                    </cq:styleGroups>
+                </policy_section33_33_33_card>             
+            </section33_33_33_card>
+            <getintouch jcr:primaryType="nt:unstructured">
+                <policy_getInTouch_standalone
+                    jcr:description="Allows only H1 and disallows links for the main page title."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Get In Touch (Standalone)"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    btnLabel="Say Hello"
+                    errorMessage="Please correct the noted errors above before attempting to submit the form again."
+                    confirmationMessage="&lt;h6&gt;We’ll be in touch soon.&lt;/h6&gt;&lt;p&gt;One of our associates will reach out at our earliest convenience to help answer any additional questions that you may have. Before then, please feel free to contact us directly.&lt;/p&gt;">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_getInTouch_standalone>
+                <policy_getInTouch_portfolio
+                    jcr:description="Allows all sizes, but not H1, which is reserved for the main page title."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Get In Touch (Portfolio)"
+                    sling:resourceType="wcm/core/components/policy/policy" 
+                    btnLabel="Say Hello"                   
+                    errorMessage="Please correct the noted errors above before attempting to submit the form again."
+                    confirmationMessage="&lt;h6&gt;We’ll be in touch soon.&lt;/h6&gt;&lt;p&gt;One of our associates will reach out at our earliest convenience to help answer any additional questions that you may have. Before then, please feel free to contact us directly.&lt;/p&gt;">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_getInTouch_portfolio>
+                <policy_getInTouch_xf
+                    jcr:description="Allows all sizes, but not H1, which is reserved for the main page title."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Get In Touch (Portfolio)"
+                    sling:resourceType="wcm/core/components/policy/policy" 
+                    btnLabel="Say Hello"                   
+                    errorMessage="Please correct the noted errors above before attempting to submit the form again."
+                    confirmationMessage="&lt;h6&gt;We’ll be in touch soon.&lt;/h6&gt;&lt;p&gt;One of our associates will reach out at our earliest convenience to help answer any additional questions that you may have. Before then, please feel free to contact us directly.&lt;/p&gt;">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_getInTouch_xf>
+            </getintouch>
+            <title jcr:primaryType="nt:unstructured">
+                <policy_641475696923109
+                    jcr:description="Allows only H1 and disallows links for the main page title."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Page Title"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    allowedTypes="h1"
+                    linkDisabled="true"
+                    type="h1">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_641475696923109>
+                <policy_641528232375303
+                    jcr:description="Allows all sizes, but not H1, which is reserved for the main page title."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Content Title"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    allowedTypes="[h2,h3,h4,h5,h6]"
+                    linkDisabled="false"
+                    type="h2">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_641528232375303>
+            </title>
+            <experiencefragment jcr:primaryType="nt:unstructured">
+                <policy_header
+                    cq:styleDefaultElement="header"
+                    cq:styleDefaultClasses="cmp-header"
+                    data-cmp-component="header"
+                    jcr:description="Sets a &lt;header> element on the page header experience fragment."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Page Header"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_header>
+                <policy_header_standalone
+                    cq:styleDefaultElement="header"
+                    cq:styleDefaultClasses="cmp-header"
+                    data-cmp-component="header"
+                    jcr:description="Sets a &lt;header> element on the page header experience fragment."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Page Header"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_header_standalone>
+                <policy_footer
+                    cq:styleDefaultElement="footer"
+                    cq:styleDefaultClasses="cmp-footer"
+                    jcr:description="Sets a &lt;footer> element on the page footer experience fragment."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Page Footer"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_footer>
+                <policy_footer_standalone
+                    cq:styleDefaultElement="footer"
+                    cq:styleDefaultClasses="cmp-footer"
+                    jcr:description="Sets a &lt;footer> element on the page footer experience fragment."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Page Footer"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_footer_standalone>
+            </experiencefragment>
+            <container jcr:primaryType="nt:unstructured">
+                <policy_1574694950110
+                    jcr:description="Allows the template components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Page Root"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    components="[group:Brookfield Common - Content,/apps/brookfieldpropertiesprogram/components/form/container,group:BROOKFIELD PROPERTIES Program - Structure]">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:authoring jcr:primaryType="nt:unstructured">
+                        <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                            <mapping_1575024218483
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="image/*"
+                                droptarget="image"
+                                resourceType="brookfieldpropertiesprogram/components/image"/>
+                            <mapping_1575030843388
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="content"
+                                assetMimetype="text/html"
+                                droptarget="experiencefragment"
+                                resourceType="brookfieldpropertiesprogram/components/experiencefragment"/>
+                            <mapping_1575030853128
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="[text/html,application/vnd.adobe.contentfragment]"
+                                droptarget="contentfragment"
+                                resourceType="brookfieldpropertiesprogram/components/contentfragment"/>
+                        </assetToComponentMapping>
+                    </cq:authoring>
+                </policy_1574694950110>
+                <policy_1574695586800
+                    jcr:description="Allows the page components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Page Content"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    components="[group:Brookfield Common - Content,/apps/brookfieldpropertiesprogram/components/form/container]">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:authoring jcr:primaryType="nt:unstructured">
+                        <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                            <mapping_1575030255082
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="image/*"
+                                droptarget="image"
+                                resourceType="brookfieldpropertiesprogram/components/image"/>
+                            <mapping_1575030260142
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="content"
+                                assetMimetype="text/html"
+                                droptarget="experiencefragment"
+                                resourceType="brookfieldpropertiesprogram/components/experiencefragment"/>
+                            <mapping_1575030269139
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="[text/html,application/vnd.adobe.contentfragment]"
+                                droptarget="contentfragment"
+                                resourceType="brookfieldpropertiesprogram/components/contentfragment"/>
+                        </assetToComponentMapping>
+                    </cq:authoring>
+                </policy_1574695586800>
+                <policy_649128221558427
+                    cq:styleDefaultElement="main"
+                    jcr:description="Sets a &lt;main> element on the page content area."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Page Main"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_649128221558427>
+                <policy_1575040440977
+                    jcr:description="Allows the template components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="XF Root"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    components="[group:Brookfield Common - Content,group:BROOKFIELD PROPERTIES Program - Structure,/apps/brookfieldpropertiesprogram/components/form/container]">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:authoring jcr:primaryType="nt:unstructured">
+                        <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                            <mapping_1575024218483
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="image/*"
+                                droptarget="image"
+                                resourceType="brookfieldpropertiesprogram/components/image"/>
+                            <mapping_1575030843388
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="content"
+                                assetMimetype="text/html"
+                                droptarget="experiencefragment"
+                                resourceType="brookfieldpropertiesprogram/components/experiencefragment"/>
+                            <mapping_1575030853128
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="[text/html,application/vnd.adobe.contentfragment]"
+                                droptarget="contentfragment"
+                                resourceType="brookfieldpropertiesprogram/components/contentfragment"/>
+                        </assetToComponentMapping>
+                    </cq:authoring>                    
+                </policy_1575040440977>
+            </container>
+            <teaser jcr:primaryType="nt:unstructured">
+                <policy_1575031387650
+                    jcr:description="Sets the title size to H3."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Content Teaser"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    titleType="h3">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_1575031387650>
+            </teaser>
+            <download jcr:primaryType="nt:unstructured">
+                <policy_1575032193319
+                    jcr:description="Sets the title size to H3."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Content Download"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    allowUpload="false"
+                    displayFilename="true"
+                    displayFormat="true"
+                    displaySize="true"
+                    titleType="h3">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_1575032193319>
+            </download>
+            <page jcr:primaryType="nt:unstructured">
+                <policy
+                    jcr:description="Includes the required client libraries."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Generic Page"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    clientlibs="[brookfieldpropertiesprogram.dependencies,brookfieldpropertiesprogram.site]"
+                    clientlibsJsHead="brookfieldpropertiesprogram.dependencies">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy>
+                <policy_standalone
+                    jcr:description="Includes the required client libraries."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Standalone Page"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    clientlibs="[brookfieldpropertiesprogram.dependencies,brookfieldpropertiesprogram.site]"
+                    clientlibsJsHead="brookfieldpropertiesprogram.dependencies">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_standalone>
+                <policy_portfolio
+                    jcr:description="Includes the required client libraries."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Portfolio Page"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    clientlibs="[brookfieldpropertiesprogram.dependencies,brookfieldpropertiesprogram.site]"
+                    clientlibsJsHead="brookfieldpropertiesprogram.dependencies">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_portfolio>
+            </page>                   
+        </components>
+    </brookfieldpropertiesprogram>    
+</jcr:root>

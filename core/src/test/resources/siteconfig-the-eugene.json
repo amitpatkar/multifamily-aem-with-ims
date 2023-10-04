@@ -1,0 +1,43 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Mon Aug 09 2021 18:00:36 GMT-0700",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": ["cq:LiveRelationship", "cq:LiveSync"],
+        "jcr:createdBy": "admin",
+        "jcr:title": "The Eugene",
+        "getInTouch": "<div class=\"contact-info contact-info--address\">\r\n                <p>${address}</p>\r\n                <p>${city}, ${stateCode} ${zipCode}</p>\r\n            </div>\r\n            <div class=\"contact-info contact-info--direction\">\r\n                <img src=\"/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/map_light.svg\" alt=\"\" aria-hidden=\"true\"/>\r\n                <a href=\"#\" >Get Directions</a>\r\n            </div>\r\n            <div class=\"contact-info contact-info--phone\"> \r\n                <img src=\"/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/phone_light.svg\" alt=\"\" aria-hidden=\"true\"/>\r\n                <a href=\"tel:+01-877-245-1215\" >${phoneNumberFormatted}</a>\r\n            </div>\r\n            <div class=\"contact-info contact-info--chat\"> \r\n                <img src=\"/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/chat_light.svg\" alt=\"\" aria-hidden=\"true\"/>\r\n                <a href=\"#\" >Chat Now</a>\r\n            </div>",
+        "cq:template": "/conf/config/settings/wcm/templates/xf-site-config",
+        "cq:lastRolledout": "Sat Aug 21 2021 15:42:38 GMT-0700",
+        "feature_disable_neighborhood": false,
+        "jcr:created": "Mon Aug 09 2021 18:00:36 GMT-0700",
+        "cq:lastModified": "Sat Aug 21 2021 15:42:38 GMT-0700",
+        "footer_cta_label": "Explore",
+        "cq:xfVariantType": "web",
+        "theme": "theme-1",
+        "footer_cta_openLinkInNewTab": "false",
+        "feature_disable_amenities": false,
+        "footer_cta_heading": "Features & Amenities",
+        "cq:tags": ["experience-fragments:variation/web"],
+        "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage-site-config",
+        "reportSuiteBaseName": "brookfieldpropertiesportfolio",
+        "cq:lastRolledoutBy": "admin",
+        "footer_cta_url": "/",
+        "cq:lastModifiedBy": "admin",
+        "root": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:mixinTypes": ["cq:LiveRelationship"],
+            "layout": "responsiveGrid",
+            "cq:lastRolledout": "Sat Aug 21 2021 15:42:38 GMT-0700",
+            "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+            "cq:lastRolledoutBy": "admin"
+        },
+        "cq:LiveSyncConfig": {
+            "jcr:primaryType": "cq:LiveCopy",
+            "cq:rolloutConfigs": [],
+            "cq:isDeep": true,
+            "cq:master": "/content/config/sites/standalone/master"
+        }
+    }
+}

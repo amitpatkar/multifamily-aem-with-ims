@@ -1,0 +1,124 @@
+
+
+
+//customized accordion for brookfield
+.cmp-accordions {
+    padding: 30px;
+    @include breakpoint-up(desktop) {
+        padding: 110px $padding-large;
+    }
+
+    &__headline {
+        h2, h3, h4, h5, h6, p {
+            @include small-title;
+        }
+        margin-bottom: 30px;
+        @include breakpoint-up(desktop) {
+            margin-bottom: 60px;
+        }
+    }
+    &__item {
+        padding: 30px 0 32px;
+        @include breakpoint-up(desktop) {
+            padding: 60px 0;
+        }
+        & +.cmp-accordions__item {
+            border-top: 2px solid $black-10;
+        }
+    }
+    &__button {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: $black-100;
+        &--expanded {
+            .cmp-accordions__icon {
+                &:before {
+                    background-image: url($accordion-minus);
+                }
+            }
+        }
+    }
+    &__title {
+        text-align: left;
+        @include large-title;
+        padding-right: 10px;
+        @include breakpoint-up(desktop){
+            padding-right: 30px;
+        }
+    }
+    &__icon {
+        @include breakpoint-up(desktop) {
+            margin-right: 25px;
+        }
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: url($accordion-plus) no-repeat center;
+            background-size: cover;
+            @include breakpoint-up(desktop) {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+    }
+    &__panel {
+        margin-top: 30px;
+        &--expanded {
+            display: block;
+        }
+        &--hidden {
+            display: none;
+        }
+        p {
+            @include body-text;
+        }
+        p + p {
+            margin-top: 20px;
+        }
+    }
+    .amenity-list {
+        padding: 10px 0 0;
+        @include breakpoint-up(desktop) {
+            -webkit-column-count: 3; 
+            -moz-column-count: 3; 
+            column-count: 3;
+            -webkit-column-gap: 30px;
+            -moz-column-gap: 30px;
+            column-gap: 30px;
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid; 
+            break-inside: avoid;
+        }
+        @include breakpoint-between('1025px', '1366px') {
+            -webkit-column-count: 2; 
+            -moz-column-count: 2; 
+            column-count: 2;
+        }
+        li {
+            padding: 5px 0;
+            @include breakpoint-down(tablet) {
+                @include body-text;
+            }
+            @include breakpoint-up(desktop) {
+                padding: 22.5px 0;
+                @include small-title;
+                display: inline-block;
+            }
+            &:last-of-type {
+                font-style: italic;
+            }
+
+        }
+    }
+}

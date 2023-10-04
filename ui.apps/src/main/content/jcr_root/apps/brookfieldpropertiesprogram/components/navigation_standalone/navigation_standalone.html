@@ -1,0 +1,55 @@
+<sly 
+    data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"
+    data-sly-use.menu="com.brookfieldpropertiesprogram.core.models.NavigationLinksLeftRight"
+    >
+    <div class="cmp-header__navbar" data-cmp-header-element="navbar">
+        <div class="cmp-header__logo">
+            <a href="/">
+                <img src="${pageInfo.propertyConfigModel.logo @context='uri'}" alt="${pageInfo.propertyConfigModel.title}" />
+            </a>
+        </div>
+        <div class="cmp-header__links" data-cmp-header-element="desktopMenu">
+            <div class="cmp-header__links--left" data-cmp-header-element="desktopMenuLeft">
+                <a data-sly-repeat="${menu.menuLinksLeft}" id="${item.id}" href="${item.absUrl}" class="cmp-header__link ${item.cssClass}">${item.label}</a>               
+            </div>
+            <div class="cmp-header__links--right" data-cmp-header-element="desktopMenuRight">
+               <a data-sly-repeat="${menu.menuLinksRight}" id="${item.id}" href="${item.absUrl}" class="cmp-header__link ${item.cssClass}">${item.label}</a>
+            </div>
+        </div>
+
+        <div class="cmp-header__triggerWrap">
+            <button class="cmp-header__trigger" 
+                    data-cmp-header-element="menuTrigger"
+                    aria-expanded="false"
+                    aria-controls="cmp-mobileMenu">
+                <span class="cmp-header__trigger--close">CLOSE</span>
+                <span class="cmp-header__trigger--open">MENU</span>
+            </button>
+        </div>
+    </div>
+    <div id="cmp-mobileMenu" class="cmp-header__mobileMenu hidden" data-cmp-header-element="mobileMenu" aria-hidden="true">
+        <div class="cmp-header__mobileMenu--body">
+            <ul class="cmp-header__mobileMenu--left" data-cmp-header-element="mobileMenuLeft">
+                <li data-sly-repeat="${menu.menuLinksLeft}"><a href="${item.absUrl}" class="cmp-header__mobileMenu--link">${item.label}</a></li>                
+            </ul>
+            <ul class="cmp-header__mobileMenu--right" data-cmp-header-element="mobileMenuRight">
+                <li data-sly-repeat="${menu.menuLinksRight}"><a href="${item.absUrl}" class="cmp-header__mobileMenu--link">${item.label}</a></li>
+            </ul>
+            <div class="cmp-header__mobileMenu--divider"></div>
+            <ul class="cmp-header__mobileMenu--info">
+                <li>
+                    <img src="/content/dam/common/icons/map_light.svg" alt="" aria-hidden="true"/>
+                    <a href="#" class="cmp-header__mobileMenu--direction">Get Directions</a>
+                </li>
+                <li>
+                    <img src="/content/dam/common/icons/phone_light.svg" alt="" aria-hidden="true"/>
+                    <a href="#" class="cmp-header__mobileMenu--phone">${pageInfo.propertyConfigModel.phoneNumber}</a>
+                </li>
+                <li>
+                    <img src="/content/dam/common/icons/chat_light.svg" alt="" aria-hidden="true"/>
+                    <a href="#" class="cmp-header__mobileMenu--chat">Chat Now</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</sly> 

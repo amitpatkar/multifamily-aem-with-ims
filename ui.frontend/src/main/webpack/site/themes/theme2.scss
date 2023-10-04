@@ -1,0 +1,35 @@
+.root {
+    &.theme-2 {
+        .cmp-header {
+            border-top: 3px solid $third-primary;
+            @include breakpoint-up(desktop) {
+                border-top: 6px solid $third-primary;
+            }
+            .cmp-header__logo {
+                a {
+                    background-color: $third-primary;
+                }
+            }
+            .cmp-header__link:not(.btn){
+                &:hover {
+                    border-bottom: 2px solid $third-primary;
+                }
+            }
+            .cmp-header__mobileMenu--link {
+                &:hover {
+                    border-bottom: 2px solid $third-primary;
+                }
+            }
+        }    
+        .cmp-footer {
+            .cmp-footer__section--property {
+                background-color: $third-primary;
+            }
+        }
+        .cmp-section33 {
+            &__card {
+                background-color: $third-primary;
+            }
+        }
+    }
+}

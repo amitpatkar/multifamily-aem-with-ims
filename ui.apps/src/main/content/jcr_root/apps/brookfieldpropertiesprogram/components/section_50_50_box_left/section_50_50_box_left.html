@@ -1,0 +1,20 @@
+<sly 
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html"    
+    data-sly-use.navigation="com.brookfieldpropertiesprogram.core.models.NavigationComponentModel"    
+    >
+    <div class="cmp-section50__wrapper">
+        <div class="cmp-section50__box">
+            <div class="cmp-section50__box-inner">
+                <h4><span class="large-title">${properties.title}</span></h4>
+                <a data-sly-repeat.cta="${navigation.menuLinks}" target="${cta.target}" href="${cta.absUrl}" class="btn btn-primary ${cta.btnType}"> 
+                    ${cta.label}
+                </a>   
+            </div>
+
+        </div>
+        <div class="cmp-section50__image">
+            <img src="${properties.bgImagePath}" alt="${properties.bgImageLabel}"/>
+        </div>
+    </div>
+</sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.title, classAppend='cmp-text'}"></sly>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          cq:styleIds="[5671290001]">
+    <container_left  jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/container">
+        <apt_detail_promo jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/apt_detail_promo" text="&lt;h3&gt;&lt;span class=&quot;cmp-apartmentDetail__promo-headline&quot;&gt;Limited-time Offer&lt;/span&gt;&lt;/h3&gt;&lt;h4&gt;&lt;span class=&quot;cmp-apartmentDetail__promo-subhead&quot;&gt;Apply by May 31 for a June move-in and...&lt;/span&gt;&lt;/h4&gt;&lt;h3&gt;&lt;span class=&quot;cmp-apartmentDetail__promo-headline&quot;&gt;July is free!*&lt;/span&gt;&lt;/h3&gt;" textIsRich="true"/>
+        <apt_detail_available jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/apt_detail_available"/>  
+    </container_left>
+    <container_right  jcr:primaryType="nt:unstructured"  sling:resourceType="brookfieldpropertiesprogram/components/container">
+        <apt_detail_virtual_tour jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/apt_detail_virtual_tour"/>       
+        <apt_detail_floorplan jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/apt_detail_floorplan"/>                    
+        <apt_detail_gallery jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/apt_detail_gallery"/>                    
+    </container_right> 
+</jcr:root>

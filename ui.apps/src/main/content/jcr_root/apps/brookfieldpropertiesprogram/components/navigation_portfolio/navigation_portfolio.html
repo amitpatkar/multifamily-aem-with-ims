@@ -1,0 +1,48 @@
+<div  data-sly-use.templates="core/wcm/components/commons/v1/templates.html" class="container">
+        <div class="d-flex">
+            <div class="logo">
+                <a href="${properties.logoUrl}"><img src="${properties.logoPath}"  alt="${properties.logoLabel}"/></a>
+            </div>
+            <div class="component navigation">
+                <nav class="utility d-none d-md-block">
+                    <a href="${properties.signInUrl}">${properties.signInLabel}</a>
+                </nav>
+                <nav class="main-nav navbar navbar-expand-md">
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav" data-sly-use.navigation="com.brookfieldpropertiesprogram.core.models.NavigationRequestModel" 
+                            data-sly-list.link="${navigation.componentModel.menuLinks}">                   
+                            <li class="${link.active}" data-sly-test.noSubMenu="${!link.subMenuLinks}">
+                                <a href="${link.getAbsUrl}" data-text="${link.label}" target="${link.openLinkInNewTab}">${link.label}</a>                
+                            </li>                           
+                            <li class="dropdown ${link.active @context='text'}" data-sly-test="${!noSubMenu}">
+                                <a class="dropdown-toggle" 
+                                   href="${link.getAbsUrl}"  
+                                   target="${link.openLinkInNewTab}" 
+                                   id="navBarItem_${linkList.index}" 
+                                   data-text="${link.label @context='text'}"
+                                   aria-expanded="false" aria-haspopup="true">
+                                    ${link.label}
+                                </a>
+                                <button class="expand fas fa-plus" type="button" 
+                                        data-toggle="collapse" 
+                                        data-target="#collapse_${linkList.index}" 
+                                        aria-expanded="false" aria-controls="collapse_${linkList.index}"><span>Expand</span></button>
+                                <div class="dropdown-menu collapse" id="collapse_${linkList.index}" aria-labelledby="navBarItem_${linkList.index}">
+                                    <ul data-sly-list.subLink="${link.subMenuLinks}">
+                                        <li>
+                                            <a href="${subLink.getAbsUrl}" target="${subLink.target}">${subLink.label}</a>
+                                        </li>
+                                    </ul>
+                                    <span class="backing"></span>
+                                </div>
+                            </li>                             
+                        </ul>
+                        <a href="${properties.signInUrl}" class="d-none d-xs-block d-sm-block d-md-none">${properties.signInLabel}</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+</div>

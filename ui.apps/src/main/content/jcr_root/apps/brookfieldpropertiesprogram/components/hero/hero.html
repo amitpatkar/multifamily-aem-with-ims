@@ -1,0 +1,63 @@
+<div data-sly-use.templates="core/wcm/components/commons/v1/templates.html"     
+     data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"
+     data-sly-use.cta="com.brookfieldpropertiesprogram.core.models.NavigationLink"
+     data-sly-use.hero="${'hero.js'}"
+     data-sly-use.updatedProps ="${'com.brookfieldpropertiesprogram.core.models.UpdatedPropRequestModel'}"
+     class="cmp-hero__wrapper" data-sly-attribute.data-cmp-component="${hero.data_cmp_class}">
+    <div data-sly-test="${properties.bgImagePath && !properties.isPlayInPlace}" class="cmp-hero__media">
+        <img  src="${properties.bgImagePath @context='uri'}" alt="${properties.bgImageLabel}" width="1920" height="1099"/>
+    </div>
+    <div data-sly-test="${properties.iFrame && properties.isPlayInPlace}" class="cmp-hero__media">
+        ${properties.iFrame @context='unsafe'}
+    </div>    
+    <div data-sly-test="${updatedProps.getProperties.logoImagePath}" class="cmp-hero__logo">
+        <img src="${updatedProps.getProperties.logoImagePath @context='uri'}" alt="${updatedProps.getProperties.logoImageLabel}"/>
+    </div>
+    <div data-sly-test="${properties.title}" class="cmp-hero__title">
+        <h1>${updatedProps.properties.title}</h1>
+    </div>    
+    <!--Banner badge html: The content inside is to be a SVG created in Illustrator or some vector program. Author should be able to upload a svg file for the banner -->
+    <div data-sly-test.hasBannerBadge="${properties.bannerBadgeImagePath}" class="cmp-hero__banner cmp-hero__banner--badge theme-1">
+        <img src="${properties.bannerBadgeImagePath @context='uri'}" alt="${properties.bannerBadgeImageLabel}" />
+    </div>    
+    <!--Banner badge html --> 
+    <div data-sly-test.hasBannerTitle="${!hasBannerBadge && properties.bannerTitle}" class="cmp-hero__banner cmp-hero__banner--default">
+        <div class="cmp-hero__banner-title">
+            ${properties.bannerTitle @context='html'}
+        </div>
+        <div data-sly-test="${cta && cta.label}"  class="cmp-hero__banner-cta">
+            <a href="${cta.absUrl @context='uri'}" class="btn btn-primary-alt">${cta.label}</a>
+        </div>
+    </div>
+    <div data-sly-test="${!hasBannerTitle && !hasBannerBadge && cta && cta.label}" class="cmp-hero__cta">
+        <button data-sly-test="${properties.isVirtualTour}" class="btn btn-submit btn-light" data-virtualtour-src="" data-virtualtour-title="" data-a11y-dialog-show="virtualtour-dialog">${cta.label}</button>
+        <a data-sly-test="${!properties.isVirtualTour}" href="${cta.absUrl @context='uri'}" class="btn btn-submit btn-light">${cta.label}</a>        
+    </div>
+
+    <!--modal for playing the virtual tour video -->
+    <div data-sly-test.notInPlace="${properties.isVirtualTour && properties.iFrame && !properties.isPlayInPlace}"
+         class="dialog-container"
+         id="virtualtour-dialog"
+         aria-hidden="true"
+         aria-labelledby="virtualtour-dialog-title"
+         aria-describedby="virtualtour-dialog-description"
+         >
+        <div class="dialog-overlay" data-a11y-dialog-hide></div>
+        <div class="dialog-content" role="document">
+            <button data-a11y-dialog-hide class="dialog-close" aria-label="Close this dialog window">
+                <span>close</span>
+                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/close_light.svg" alt=""/>              
+            </button>
+
+            <!--dialog title and description are for accessibility purposes.  -->
+            <h1 id="virtualtour-dialog-title" class="visually-hidden">3D virtual tour</h1>
+            <p id="virtualtour-dialog-description" class="visually-hidden">Explore the space seamlessly</p>
+            <div class="dialog-media-wrapper">
+                ${properties.iFrame @context='unsafe'}
+            </div>
+
+        </div>
+    </div>
+    <!--modal for playing the virtual tour video end-->
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.bgImageLabel, classAppend='cmp-text'}"></sly>

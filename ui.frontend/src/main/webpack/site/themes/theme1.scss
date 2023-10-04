@@ -1,0 +1,50 @@
+.root {
+    &.theme-1 {
+        .cmp-header {
+            border-top: 3px solid $eugene-primary;
+            @include breakpoint-up(desktop) {
+                border-top: 6px solid $eugene-primary;
+            }
+            .cmp-header__logo {
+                a {
+                    background-color: $eugene-primary;
+                }
+            }
+            .cmp-header__link:not(.btn){
+                &:hover {
+                    border-bottom: 2px solid $eugene-primary;
+                }
+            }
+            .cmp-header__mobileMenu--link {
+                &:hover {
+                    border-bottom: 2px solid $eugene-primary;
+                }
+            }
+        }
+        .cmp-footer {
+            .cmp-footer__section--property {
+                background-color: $eugene-primary;
+            }
+        }
+        .cmp-section33 {
+            &__card {
+                &--text33{
+                    background-color: $eugene-primary;
+                }
+                &--logo33,
+                &--cta33,
+                &--cta33-2 {
+                    background-color: $black-100;
+                }
+            }
+        }
+        .cmp-apartmentDetail {
+            &__search,
+            &__promo {
+                background-color: $eugene-accent2;
+                color: $black-100;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,26 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" 
+     data-sly-use.cta="com.brookfieldpropertiesprogram.core.models.NavigationLink"
+     data-sly-use.ctas="com.brookfieldpropertiesprogram.core.models.NavigationRequestModel"
+     >
+    <div class="cmp-apartmentDetail__gallery-row cmp-apartmentDetail__gallery-row--100">
+        <div class="cmp-apartmentDetail__gallery-col">
+            <div class="cmp-apartmentDetail__image cmp-apartmentDetail__image--full">
+                <img src="{{gallery.full.src}}" alt="image alt">
+            </div>
+        </div>
+
+    </div>
+    <div class="cmp-apartmentDetail__gallery-row cmp-apartmentDetail__gallery-row--50-50">
+        <div class="cmp-apartmentDetail__gallery-col">
+            <div class="cmp-apartmentDetail__image cmp-apartmentDetail__image--half">
+                <img src="{{gallery.half_left.src}}" alt="image alt">
+            </div>
+        </div>
+        <div class="cmp-apartmentDetail__gallery-col">
+            <div class="cmp-apartmentDetail__image cmp-apartmentDetail__image--half">
+                <img src="{{gallery.half_right.src}}" alt="image alt">
+            </div>
+        </div>
+    </div>  
+</sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.text, classAppend='cmp-text'}"></sly>

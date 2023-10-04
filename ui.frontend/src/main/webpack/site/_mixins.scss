@@ -1,0 +1,274 @@
+@use "sass:math";
+//Font Family
+  @mixin font-regular {
+    font-family: "CerebriSans", sans-serif;
+  }
+  
+  @mixin font-light {
+    font-family: "CerebriSans-Light", sans-serif;
+  }
+  
+  @mixin font-medium {
+    font-family: "CerebriSans-Medium", sans-serif;
+  }
+  
+  @mixin font-bold {
+    font-family: "CerebriSans-Bold", sans-serif;
+  }
+  
+  //Breakpoints
+  
+  // 441px, 769px, 1025px
+  $breakpoints-up: ("mobile-large": "441px", "tablet": "769px", "desktop": "1025px");
+  
+  // 440px, 768px, 1024px
+  $breakpoints-down: ("mobile-small": "440px", "mobile-large": "768px", "tablet": "1024px");
+  
+  @mixin breakpoint-up($size){
+    @media (min-width: map-get($breakpoints-up, $size)){
+      @content;
+    }
+  }
+  
+  @mixin breakpoint-down($size){
+    @media (max-width: map-get($breakpoints-down, $size)){
+      @content;
+    }
+  }
+  @mixin breakpoint-between($min, $max){
+    @media (min-width: $min ) and (max-width: $max){
+      @content;
+    }
+  }
+
+    //Topography
+    //title variations
+    @mixin hero-title {
+      @include font-light;
+      font-size: $font-48;
+      line-height: $lh-xs;
+      letter-spacing: $ls-n2;
+      @include breakpoint-up(desktop) {
+        font-size: $font-90;
+      }
+    }
+    @mixin large-title {
+      @include font-light;
+      font-size: $font-28;
+      line-height: $lh-xs;
+      letter-spacing: $ls-5;
+      text-transform: uppercase;
+      @include breakpoint-up(desktop) {
+        font-size: $font-45;
+      }
+    }
+    @mixin medium-title {
+      @include font-regular;
+      font-size: $font-12;
+      line-height: $lh-s;
+      letter-spacing: $ls-2;
+      text-transform: uppercase;
+      @include breakpoint-up(desktop) {
+        font-size: $font-30;
+        letter-spacing: $ls-n1;
+      }
+    }
+    @mixin small-title {
+      @include font-light;
+      font-size: $font-27;
+      line-height: $lh-s;
+      letter-spacing: $ls-2;
+      @include breakpoint-up(desktop) {
+        font-size: $font-30;
+        letter-spacing: 0;
+      }
+    }
+    @mixin intermediate-title {
+      @include font-regular;
+      font-size: $font-15;
+      line-height: $lh-m;
+      letter-spacing: $ls-8;
+      text-transform: uppercase;
+      @include breakpoint-up(desktop) {
+        font-size: $font-18;
+      }
+    }
+    @mixin stat-number {
+      @include font-light;
+      font-size: $font-60;
+      line-height: $lh-xs;
+      letter-spacing: $ls-n2;
+      @include breakpoint-up(desktop) {
+        font-size: $font-120;
+      }
+    }
+    @mixin highlight-title {
+      @include font-regular;
+      font-size: $font-27;
+      line-height: $lh-m;
+      letter-spacing: $ls-3;
+      @include breakpoint-up(desktop) {
+        font-size: $font-42;
+      }
+    }
+
+    @mixin lead-text {
+      @include font-regular;
+      font-size: $font-28;
+      line-height: $lh-m;
+      letter-spacing: $ls-3;
+      @include breakpoint-up(desktop) {
+        font-size: $font-42;
+      }
+    }
+    @mixin body-text {
+      @include font-light;
+      font-size: $font-18;
+      line-height: $lh-l;
+      letter-spacing: $ls-2;
+    }
+    @mixin contacts-text {
+      @include font-light;
+      font-size: $font-18;
+      line-height: $lh-m;
+      letter-spacing: $ls-5;
+      text-transform: uppercase;
+    }
+    @mixin card-text {
+      @include font-regular;
+      font-size: $font-12;
+      line-height: $lh-s;
+      letter-spacing: $ls-2;
+      @include breakpoint-up(desktop) {
+        font-size: $font-30;
+        letter-spacing: $ls-n1;
+      }
+    }
+    @mixin label-text {
+      @include font-medium;
+      font-size: $font-15;
+      line-height: $lh-l;
+      letter-spacing: $ls-2;
+    }
+    @mixin interactive-text {
+      @include font-regular;
+      font-size: $font-15;
+      line-height: $lh-m2;
+      letter-spacing: $ls-5;
+    }
+    @mixin legal-text { 
+      @include font-light;
+      font-size: $font-15;
+      line-height: $lh-m;
+      letter-spacing: $ls-3;
+    }
+
+    //form 
+    @mixin form-label{ 
+      @include font-regular;
+      font-size: $font-15;
+      line-height: $lh-m;
+      letter-spacing: $ls-5;
+      text-transform: uppercase;
+    }
+    @mixin form-input{ 
+      @include font-regular;
+      font-size: $font-15;
+      line-height: $lh-m2;
+      letter-spacing: $ls-5;
+    }
+    @mixin form-placeholder{ 
+      @include font-light;
+      font-weight: 300 !important;
+      font-size: $font-18;
+      line-height: $lh-s;
+      letter-spacing: $ls-3;
+      font-style: italic;
+    }
+    @mixin form-error-text { 
+      color: $error-100;
+      @include font-regular;
+      font-size: $font-12;
+      line-height: $lh-m;
+      letter-spacing: $ls-3;
+    }
+    @mixin form-select {
+      @include form-label;
+      width: 100%;
+      height: 50px;
+      padding: 0 20px;
+      border: none;
+      border-radius: 6px;
+      background: $black-5 url($select-arrow) no-repeat calc(100% - 20px) center;
+      appearance: none;
+      -webkit-appearance: none; 
+      -moz-appearance: none;
+      &::-ms-expand { display: none; } 
+    }
+
+    //aspect ratio box
+    @mixin aspect-ratio-box-dynamic($ratio: 1920 1022) {
+      $paddingTop: percentage(math.div(nth($ratio, 2), nth($ratio, 1)));
+      font-size: 1px;
+      overflow: hidden;
+      &::before {
+        content: "";
+        width: 1px;
+        margin-left: -1px;
+        float: left;
+        height: 0;
+        padding-top: $paddingTop;
+      }
+      &::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      img, video {
+        object-fit: cover;
+      }
+      
+    }
+
+    @mixin aspect-ratio-box-fixed($ratio: 1920 1022) {
+      $paddingTop: percentage(math.div(nth($ratio, 2), nth($ratio, 1)));
+      position: relative;
+      font-size: 1px;
+      height: 0;
+      overflow: hidden;
+      padding-top: $paddingTop;
+      >* {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      img, video {
+        object-fit: cover;
+      }
+      img, video, iframe {
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    @mixin visuallyhidden {
+      clip: rect(1px, 1px, 1px, 1px);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+
+    @mixin btn-themes($btnTextColor, $btnBgColor, $btnBorderColor, $btnBgImageUrl) {
+      background-color: $btnBgColor;
+      color: $btnTextColor;
+      border: 2px solid $btnBorderColor;
+      background-image: $btnBgImageUrl;
+    }
+
+

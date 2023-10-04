@@ -1,0 +1,255 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Static Frontend file</title>
+    <meta name="template" content="page-content"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-base.css" type="text/css">
+    <script type="text/javascript" src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-dependencies.js"></script>
+    <link rel="stylesheet" href="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-dependencies.css" type="text/css">
+</head>
+<body class="page basicpage home-page">
+<!--Header for testing only -->
+<header class="cmp-header theme-1" data-cmp-component="header">
+    <nav>
+        <div class="cmp-header__navbar" data-cmp-header-element="navbar">
+            <div class="cmp-header__logo">
+                <a href="/">
+                    <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/logos/logo_Eugene.svg" alt="home" />
+                </a>
+            </div>
+            <div class="cmp-header__links" data-cmp-header-element="desktopMenu">
+                <div class="cmp-header__links--left" data-cmp-header-element="desktopMenuLeft">
+                    <a href="#" class="cmp-header__link">Features & Amenities</a>
+                    <a href="#" class="cmp-header__link">Neighborhood</a>
+                </div>
+                <div class="cmp-header__links--right" data-cmp-header-element="desktopMenuRight">
+                    <a href="javascript:void(0)" class=" cmp-header__link btn btn-primary btn-light" >Schedule a Tour</a>
+                    <a href="#" class="cmp-header__link">Lease Online</a>
+                    <a href="#" class="cmp-header__link">Get in touch</a>
+                    
+                </div>
+            </div>
+    
+            <div class="cmp-header__triggerWrap">
+                <button class="cmp-header__trigger" 
+                data-cmp-header-element="menuTrigger"
+                aria-expanded="false"
+                aria-controls="cmp-mobileMenu">
+                    <span class="cmp-header__trigger--close">CLOSE</span>
+                    <span class="cmp-header__trigger--open">MENU</span>
+                </button>
+            </div>
+        </div>
+        <div id="cmp-mobileMenu" class="cmp-header__mobileMenu hidden" data-cmp-header-element="mobileMenu" aria-hidden="true">
+            <div class="cmp-header__mobileMenu--body">
+                <ul class="cmp-header__mobileMenu--left" data-cmp-header-element="mobileMenuLeft">
+                    <li><a href="#" class="cmp-header__mobileMenu--link">Features & Amenities</a></li>
+                    <li><a href="#" class="cmp-header__mobileMenu--link">Neighborhood</a></li>
+                </ul>
+                <ul class="cmp-header__mobileMenu--right" data-cmp-header-element="mobileMenuRight">
+                    <li><a href="#" class="btn btn-primary btn-light">Schedule a Tour</a></li>
+                    <li><a href="#" class="cmp-header__mobileMenu--link">Lease Onlilne</a></li>
+                    <li><a href="#" class="cmp-header__mobileMenu--link">Get in Touch</a></li>
+                </ul>
+                <div class="cmp-header__mobileMenu--divider"></div>
+                <ul class="cmp-header__mobileMenu--info">
+                    <li>
+                        <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/map_light.svg" alt="" aria-hidden="true"/>
+                        <a href="#" class="cmp-header__mobileMenu--direction">Get Directions</a>
+                    </li>
+                    <li>
+                        <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/phone_light.svg" alt="" aria-hidden="true"/>
+                        <a href="#" class="cmp-header__mobileMenu--phone">(877) 245-1215</a>
+                    </li>
+                    <li>
+                        <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/chat_light.svg" alt="" aria-hidden="true"/>
+                        <a href="#" class="cmp-header__mobileMenu--chat">Chat Now</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+
+    </nav>       
+
+</header>
+<!--Header for testing only  end -->
+    <!--Hero short-->
+<div class="cmp-hero cmp-hero--short">
+    <div class="cmp-hero__wrapper">
+        <div class="cmp-hero__media">
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/hero_sample_image.jpg" alt="description of the image" width="1920" height="1095"/>
+        </div>
+        <div class="cmp-hero__title">
+            <h1>Available Apartments</h1>
+        </div>
+    </div>
+</div>
+<!--Hero short: end -->
+
+ <!--Header and Hero components are for testing only-->
+
+    <!--Availability Search -->
+    <div class="cmp-availability" data-cmp-component="availabilityfeed">
+        <div class="cmp-availability__title">
+            <h2><span class="large-title">Claim Your Space</span></h2>
+        </div>
+        <div class="cmp-availability__wrapper">
+            <div class="cmp-availability__filters">
+                <form 
+                method="POST"
+                action="#"
+                enctype="multipart/form-data"
+                class="cmp-form"
+                id="availability-filters"
+                name="availability-filters">
+                    <div class="cmp cmp-options move-in-date">
+                        <fieldset class="form-group checkbox">
+                            <legend>MOVE-IN DATE</legend>
+                            <div class="checkbox-item">
+                                <label>
+                                    <input type="checkbox" name="today" value="today">
+                                    <span>TODAY</span>
+                                </label>
+                            </div>
+                            <div class="checkbox-item">
+                                <label>
+                                    <input type="checkbox" name="nextmonth" value="nextmonth">
+                                    <span>SEPT</span>
+                                </label>
+                            </div>
+                            <div class="checkbox-item">
+                                <label>
+                                    <input type="checkbox" name="next2month" value="next2month">
+                                    <span>OCT</span>
+                                </label>
+                            </div>
+                            <div class="checkbox-item">
+                                <label>
+                                    <input type="checkbox" name="anydate" value="anydate">
+                                    <span>ANY</span>
+                                </label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="cmp cmp-options home-type">
+                        <fieldset class="form-group checkbox">
+                            <legend>HOME TYPE</legend>
+                            <div class="checkbox-item">
+                                <label>
+                                    <input type="checkbox" name="studio" value="Studio">
+                                    <span>STUDIO</span>
+                                </label>
+                            </div>
+                            <div class="checkbox-item">
+                                <label>
+                                    <input type="checkbox" name="onebedroom" value="1 Bed">
+                                    <span>1 BD</span>
+                                </label>
+                            </div>
+                            <div class="checkbox-item">
+                                <label>
+                                    <input type="checkbox" name="twobedroom" value="2 Bed">
+                                    <span>2+ BD</span>
+                                </label>
+                            </div>
+                            <div class="checkbox-item">
+                                <label>
+                                    <input type="checkbox" name="penthouse" value="Pen">
+                                    <span>PH</span>
+                                </label>
+                            </div>
+                            <div class="checkbox-item">
+                                <label>
+                                    <input type="checkbox" name="townhome" value="Town">
+                                    <span>TH</span>
+                                </label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="cmp cmp-options max-rent">
+                        <div class="form-group drop-down">
+                          <label for="max_rent">Max Rent</label>
+                          <select name="maxrent" id="availability-filter-max-rent" class="form-control">
+                            <option value="2000">$4000</option>
+                            <option value="3000">$5000</option>
+                            <option value="4000">$6000</option>
+                            <option value="5000">$7000</option>
+                            <option value="6000">$8000</option>
+                          </select>
+                        </div>
+                    </div>
+                    <button 
+                    type="submit"
+                    id="availability_filter_submit"
+                    class="cmp-form-button btn btn-dark btn-submit"
+                    name="availabilityFilterSubmit">Refine Results</button>
+
+                </form>
+
+            </div>
+            <div class="cmp-availability__results hidden">
+                <div class="cmp-availability__results_table">
+                    <table id="availability-result-table">
+                        <caption class="visually-hidden">Availability Search Results</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col" tabindex="0" class="sorting" data-sort-field="name">
+                                    <span>floor plan</span>
+                                </th>
+                                <th scope="col" tabindex="0" class="sorting" data-sort-field="type">
+                                    <span>bed | bath</span>
+                                </th>
+                                <th scope="col" tabindex="0" class="sorting" data-sort-field="area">
+                                    <span>size</span>
+                                </th>
+                                <th scope="col" tabindex="0" class="sorting asc" data-sort-field="minRent">
+                                    <span>rent</span>
+                                </th>
+                                <th scope="col">
+                                    <span>availability</span>
+                                </th>
+                                <th scope="col">
+                                    <span class="visually-hidden">view apartment</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="cmp-availability__results_list">
+                    <div class="cmp-availability__results-sorting">
+                        <label for="availability-sort-field">Sort By</label>
+                        <select name="availability-sort-field" id="availability-sort-field">
+                            <option value="name" selected>Floor Plan</option>
+                            <option value="type">Bed | Bath</option>
+                            <option value="area">Size</option>
+                            <option value="minRent" selected>Rent</option>
+                        </select>
+                    </div>
+                    <ul id="availability-result-list"></ul>
+                </div>
+                <div class="cmp-availability__paginate cmp-availability__paginate--table"></div>
+                <div class="cmp-availability__paginate cmp-availability__paginate--list"></div>
+                <div class="cmp-availability__disclaimer">
+                    <p class="legal-text">*Rent displayed is for the best-priced term. Rates vary by lease term and move-in date. Select “View Apartment” to see all other rate options.</p>
+                </div>
+            </div>
+            <div class="cmp-availability__emptyResults hidden">
+                <p>No Units Available</p>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!--Availability Search end-->
+
+
+<script type="text/javascript" src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-base.js"></script>
+</body>
+</html>

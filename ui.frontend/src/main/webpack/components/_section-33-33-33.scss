@@ -1,0 +1,228 @@
+.cmp-section33 {
+    &__row {
+        width: 100vw;
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .cmp-container {
+        width: 100%;
+    }
+    &.cols-66-33,
+    &.cols-33-66 {
+        .cmp-section33__card--text33 {
+            @include aspect-ratio-box-fixed(2 1);
+            @include breakpoint-up(desktop) { 
+                @include aspect-ratio-box-fixed(1 1);
+            }
+        }
+    }
+    &.cols-33-33-33 {
+        .cmp-section33__card--text33{
+            @include aspect-ratio-box-fixed(1 1);
+            &.priority {
+                @include breakpoint-down(tablet) { 
+                    @include aspect-ratio-box-fixed(2 1);
+                }
+
+            }
+        }
+    }
+
+    &__card {
+        margin: 0;
+        padding: 0;
+        border: none;
+        background-color: $white-100;
+
+        &.theme-1 {
+            background-color: $eugene-primary;
+        }
+        &.theme-2 {
+            background-color: $third-primary;
+        }
+        &--image66 {
+            @include aspect-ratio-box-fixed(2 1);
+        }
+        &--copy66 {
+            @include aspect-ratio-box-dynamic(2 1);
+        }
+        &--image33, &--logo33,  &--empty33 {
+            @include aspect-ratio-box-fixed(1 1);
+        }
+        &--cta33, &--cta33-2{
+            @include aspect-ratio-box-fixed(2 1);
+            @include breakpoint-up(desktop) { 
+                @include aspect-ratio-box-fixed(1 1);
+            }
+        }
+        &--copy66 {
+            color: $black-100;
+            display: flex;
+            align-items: center;
+            @include breakpoint-between("1025px", "1366px") {
+                h2, h3, h4, h5 ,h6 {font-size: 32px !important};
+            }; 
+            h2, h3, h3, h5, h6 {@include lead-text};
+            .cmp-section33__cardContent {
+                padding: 85px 30px;
+                @include breakpoint-up(desktop) { 
+                    padding: 30px 22.3%;
+                }
+            }
+        }
+        &--text33, &--logo33 {
+            .cmp-section33__cardContent{
+                text-align: center;
+            }
+        }
+        &--text33, &--cta33, &--cta33-2 { 
+            .cmp-section33__cardContent{
+                color: $white-100;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                padding: 30px;
+            }
+        }
+        &--logo33, &--cta33, &--cta33-2 {
+            background: $black-100;
+        }
+        &--cta33, &--cta33-2 {
+            .cmp-section33__cardContent{
+                padding: 0 30px;
+                @include breakpoint-up(desktop) { 
+                    padding: 0 14%;
+                }
+            }
+        }
+        &--logo33 {
+            .cmp-section33__cardContent{ 
+                padding: $padding-medium;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                @include breakpoint-up(desktop) { 
+                    padding: $padding-large;
+                }
+                >* {
+                    align-self: center;
+                    justify-self: center;
+                    grid-column: 1;
+                    grid-row:1;
+                }
+                .cmp-section33__pattern {
+                    width: 100%;
+                    max-width: 100%;
+                }
+                .cmp-section33__logo {
+                    width: 55%;
+                    height: auto;
+                    padding: 5%;
+                    background-color: $black-100;
+                    @include breakpoint-up(desktop) {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+        &--cta33-2 {
+            .btn-tertiary {
+                display: block;
+                width: $btn-sec-width;
+            }
+        }
+
+    }
+    &__cardContent {
+        box-sizing: border-box;
+    }
+
+    &.cols-66-33 {
+        .cmp-section33__card--copy66{
+            .cmp-section33__cardContent {
+                @include breakpoint-up(desktop) {
+                    padding: 30px 12% 30px 22.3%;
+                }
+            }
+        }
+    }
+    &.cols-33-66 {
+        .cmp-section33__card--copy66{
+            .cmp-section33__cardContent {
+                @include breakpoint-up(desktop) {
+                    padding: 30px 22.3% 30px 12%;
+                }
+            }
+        }
+    }
+    &.cols-33-33-33 {
+        .cmp-section33__row {
+            .cmp-section33__col {
+                width: 50%;
+                @include breakpoint-up(desktop) { 
+                    width: 33.33%;
+                }
+                &.priority {
+                    width: 100%;
+                    @include breakpoint-up(desktop) { 
+                        width: 33.33%;
+                    }
+                }
+            }
+        }
+    }
+    &.cols-66-33 {
+        .cmp-section33__row {
+            .cmp-section33__col {
+                width: 100%;
+                &:nth-of-type(1) {
+                    @include breakpoint-up(desktop) { 
+                        width: 66.66%;
+                    }
+                }
+                &:nth-of-type(2) {
+                    @include breakpoint-up(desktop) { 
+                        width: 33.33%;
+                    }
+                }
+            }
+        }
+    }
+    &.cols-33-66 {
+        .cmp-section33__row {
+            .cmp-section33__col {
+                width: 100%;
+                &:nth-of-type(1) {
+                    @include breakpoint-up(desktop) { 
+                        width: 33.33%;
+                    }
+                }
+                &:nth-of-type(2) {
+                    @include breakpoint-up(desktop) { 
+                      width: 66.66%;
+                    }
+                }
+            }
+        }
+    }
+    &.cols-33-66,
+    &.cols-66-33 {
+        .cmp-section33__card--image33 {
+            @include aspect-ratio-box-fixed(1 1);
+        }
+    }
+    &.cols-33-66,
+    &.cols-66-33,
+    &.cols-33-33-33 {
+        .cmp-section33__row {
+            .cmp-section33__col.empty { 
+                @include breakpoint-down(tablet) { 
+                    width: 0;
+                }
+            }
+        }
+    }
+}

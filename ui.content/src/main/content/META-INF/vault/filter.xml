@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    
+    <filter root="/content/cq:tags/metro-areas" mode="merge"/>
+    <filter root="/content/cq:tags/neighborhoods" mode="merge"/>
+    <filter root="/content/cq:tags/ameneties" mode="merge"/>
+    <filter root="/content/cq:tags/office-hours" mode="merge"/>
+    <filter root="/content/cq:tags/states" mode="merge"/>
+               
+    <!-- portfolio -->    
+    <filter root="/content/portfolio" mode="merge"/>    
+    <filter root="/content/standalone" mode="merge"/>  
+    <filter root="/content/config" mode="merge"/>
+    
+    <filter root="/content/dam/properties" mode="merge"/>    
+    <filter root="/content/dam/portfolio" mode="merge"/>   
+    <filter root="/content/dam/standalone" mode="merge"/> 
+    <filter root="/content/dam/common" mode="merge"/>        
+
+
+    <filter root="/content/experience-fragments/portfolio" mode="merge"/>
+    <filter root="/content/experience-fragments/standalone" mode="merge"/>
+    <filter root="/content/experience-fragments/common" mode="merge"/>
+    
+    <!-- common -->
+    <filter root="/conf/common" mode="replace"/>
+    <filter root="/conf/config" mode="replace"/>
+    
+    
+    
+</workspaceFilter>

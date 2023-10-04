@@ -1,0 +1,114 @@
+
+//Colors
+$white-100: #FFFFFF;
+$black-100: #191919;
+$black-90: rgba(25, 25, 25, 0.9);
+$black-70: rgba(25, 25, 25, 0.7);
+$black-60: rgba(25, 25, 25, 0.6);
+$black-50: rgba(25, 25, 25, 0.5);
+$black-35: rgba(25, 25, 25, 0.35);
+$black-30: rgba(25, 25, 25, 0.3);
+$black-20: rgba(25, 25, 25, 0.2);
+$black-10: rgba(25, 25, 25, 0.1);
+$black-5: rgba(25, 25, 25, 0.05);
+$eugene-primary: #85754E;
+$eugene-primary-30: rgba(133, 117, 78, 0.3);
+$eugene-accent1:  #D1B97B;
+$eugene-accent2: #D1CBBA;
+$third-primary: #3B8589;
+$brookfield-primary: #063655;
+$brookfield-nero-90:rgba(3, 33, 57, 0.9);
+$brookfield-nero-100: #032139;
+$brookfield-green: #00FF3D;
+$error-100: #BD0000;
+$error-5: rgba(189, 0, 0, 0.05);
+$transparent: transparent;
+
+//padding 
+
+$padding-large: 15%;
+$padding-medium: 10%;
+$padding-small: 30px;
+
+//Font Sizes
+$font-12: 12px;
+$font-15: 15px;
+$font-18: 18px;
+$font-27: 27px;
+$font-28: 28px;
+$font-30: 30px;
+$font-42: 42px;
+$font-45: 45px;
+$font-48: 48px;
+$font-60: 60px;
+$font-90: 90px;
+$font-120: 120px;
+
+
+//letter-spacing
+$ls-n3: -0.03em;
+$ls-n2: -0.02em;
+$ls-n1: -0.01em;
+$ls-1: 0.01em;
+$ls-2: 0.02em;
+$ls-3: 0.03em;
+$ls-5: 0.05em;
+$ls-8: 0.08em;
+$ls-10: 0.1em;
+
+
+//line-height
+$lh-xxs: 0.9;
+$lh-xs: 1;
+$lh-s: 1.2;
+$lh-m: 1.4;
+$lh-m2: 1.6;
+$lh-l: 2;
+
+//Button Size
+$btn-pr-width: 250px;
+$btn-sec-width: 200px;
+$btn-submit-width-mobile: 310px;
+$btn-submit-width: 350px;
+$btn-height: 40px;
+$btn-submit-height: 60px;
+$btn-submit-height-mobile: 50px;
+$btn-radius: 2px;
+
+//Nav bar height
+$navbar-desktop: 75px;
+$navbar-mobile: 68px;
+
+
+//Icon paths
+$icon-base-path: '/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/';
+$arrow-light: '#{$icon-base-path}arrow_light.svg';
+$arrow-dark: '#{$icon-base-path}arrow_dark.svg';
+$chevron-light: '#{$icon-base-path}chevron_light.svg';
+$chevron-dark: '#{$icon-base-path}chevron_dark.svg';
+$chevron-green: '#{$icon-base-path}chevron_green.svg';
+$select-arrow: '#{$icon-base-path}select_arrow.svg';
+$sort-arrows: '#{$icon-base-path}sort_arrows.svg';
+$sort-arrows-asc: '#{$icon-base-path}sort_arrows_asc.svg';
+$sort-arrows-desc: '#{$icon-base-path}sort_arrows_desc.svg';
+$accordion-plus: '#{$icon-base-path}accordion_plus.svg';
+$accordion-minus: '#{$icon-base-path}accordion_minus.svg';
+
+
+//== Font
+
+$font-family:           "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size:             16px;
+$font-height:           1.5;
+
+//== Color
+
+// Normal mode
+$color-foreground:      #202020;
+$color-background:      #ECECEC;
+$color-link:            #2020E0;
+
+// Dark mode
+$color-foreground-dark: invert($color-foreground);
+$color-background-dark: invert($color-background);
+$color-link-dark:       invert($color-link);

@@ -1,0 +1,138 @@
+<sly 
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html"     
+    data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"
+    data-sly-use.navigation="com.brookfieldpropertiesprogram.core.models.NavigationComponentModel"
+    data-sly-use.updatedProps ="${'com.brookfieldpropertiesprogram.core.models.UpdatedPropRequestModel'}"/>
+<div class="cmp-get-in-touch__contents">
+    <h2 class="cmp-get-in-touch__title">Get in Touch</h2>
+    <div class="cmp-get-in-touch__copy">
+        We’re waiting to hear from you and answer any of your questions about our great services.
+    </div>
+    ${updatedProps.getProperties.getInTouch @context='html'}
+    <div data-sly-test="${pageInfo.propertyConfigModel.officeHours}" class="contact-info contact-info--office">
+        <h4>OFFICE HOUR</h4>
+        <p data-sly-repeat="${pageInfo.propertyConfigModel.officeHours}">${item}</p>
+    </div>
+</div>
+<div class="cmp-get-in-touch__form-area">
+    <form
+        action="#"
+        class="cmp-form"
+        id="contact_form"
+        name="contact_form">
+        <div class="text half-width">
+            <div class="cmp-form-text">
+                <label for="first_name">FIRST NAME</label>
+                <input class="cmp-form-text__text" data-cmp-hook-form-text="input" type="text" id="first_name" placeholder="First Name" name="first_name">
+                <p class="cmp-form-error-message hidden">Required Field</p>
+            </div>
+        </div>
+        <div class="text half-width">
+            <div class="cmp-form-text">
+                <label for="last_name">LAST NAME</label>
+                <input class="cmp-form-text__text" data-cmp-hook-form-text="input" type="text" id="last_name" placeholder="Last Name" name="last_name">
+                <p class="cmp-form-error-message hidden">Required Field</p>
+            </div>
+        </div>
+        <div class="text">
+            <div class="cmp-form-text">
+                <label for="email_address">EMAIL ADDRESS</label>
+                <input class="cmp-form-text__text" data-cmp-hook-form-text="input" type="email" id="email_address" placeholder="Email Address" name="email">
+                <p class="cmp-form-error-message hidden">Required Field</p>
+            </div>
+        </div>
+        <div class="text">
+            <div class="cmp-form-text">
+                <label for="phone_number">PHONE NUMBER</label>
+                <input class="cmp-form-text__text" data-cmp-hook-form-text="input" type="tel" id="phone_number" placeholder="Phone Number" name="phone_number">
+                <p class="cmp-form-error-message hidden">Required Field</p>
+            </div>
+        </div>
+        <div class="cmp cmp-options move-in-date">
+            <fieldset class="form-group radio">
+                <legend>MOVE-IN DATE</legend>
+                <div class="radio-item">
+                    <label>
+                        <input type="radio" name="move_in_date" value="today">
+                        <span>TODAY</span>
+                    </label>
+                </div>
+                <div class="radio-item">
+                    <label>
+                        <input type="radio" name="move_in_date" value="nextmonth">
+                        <span id="move_in_date_month_1">SEPT</span>
+                    </label>
+                </div>
+                <div class="radio-item">
+                    <label>
+                        <input type="radio" name="move_in_date" value="next2month">
+                        <span id="move_in_date_month_2">OCT</span>
+                    </label>
+                </div>
+                <div class="radio-item">
+                    <label>
+                        <input type="radio" name="move_in_date" value="anydate">
+                        <span>ANY</span>
+                    </label>
+                </div>
+            </fieldset>
+        </div>
+        <div class="cmp cmp-options home-type">
+            <fieldset class="form-group checkbox">
+                <legend>HOME TYPE</legend>
+                <div class="checkbox-item">
+                    <label>
+                        <input type="checkbox" name="studio" value="Studio">
+                        <span>STUDIO</span>
+                    </label>
+                </div>
+                <div class="checkbox-item">
+                    <label>
+                        <input type="checkbox" name="onebedroom" value="1 Bed">
+                        <span>1 BD</span>
+                    </label>
+                </div>
+                <div class="checkbox-item">
+                    <label>
+                        <input type="checkbox" name="twobedroom" value="2 Bed">
+                        <span>2+ BD</span>
+                    </label>
+                </div>
+                <div class="checkbox-item">
+                    <label>
+                        <input type="checkbox" name="penthouse" value="Pent">
+                        <span>PH</span>
+                    </label>
+                </div>
+                <div class="checkbox-item">
+                    <label>
+                        <input type="checkbox" name="townhome" value="Town">
+                        <span>TH</span>
+                    </label>
+                </div>
+            </fieldset>
+        </div>
+        <p id="get_in_touch_error" class="cmp-form-error-message hidden">${currentStyle.errorMessage ? currentStyle.errorMessage : 'Please correct the noted errors above before attempting to submit the form again.'}</p>
+        <button
+            type="submit"
+            id="get_in_touch_submit"
+            class="cmp-form-button btn btn-dark btn-primary"
+            name="getInTouchSubmit">${currentStyle.btnLabel ? currentStyle.btnLabel : 'Say Hello'}</button>
+    </form>
+    <div class="cmp-get-in-touch__postsubmission hidden">
+        <div class="cmp-get-in-touch__greeting">
+            <p><img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/confirmation_dark.svg" alt="" />Thank you, <span class="cmp-get-in-touch__confirmation--name">Andrew</span>!</p>
+        </div>
+        <div class="cmp-get-in-touch__confirmation">
+            ${currentStyle.confirmationMessage ? currentStyle.confirmationMessage : '&lt;h6&gt;We’ll be in touch soon.&lt;/h6&gt;&lt;p&gt;One of our associates will reach out at our earliest convenience to help answer any additional questions that you may have. Before then, please feel free to contact us directly.&lt;/p&gt;' @context='html'}
+        </div>
+        <div class="cmp-get-in-touch__spacer"></div>
+        <div class="cmp-get-in-touch__cta">
+            <p class="cmp-get-in-touch__cta--intro">IN-PERSON AND VIRTUAL TOURS ARE Currently AVAILABLE.</p>
+            <p data-sly-repeat.cta="${navigation.menuLinks}"><a href="${cta.url @context='uri'}" class="btn btn-primary btn-dark ${cta.cssClass @context='attribute'}">${cta.label}</a></p>            
+        </div>
+    </div>
+
+</div>
+<!--<div class="col-md-6" data-sly-resource="${'contactus'@resourceType='brookfieldpropertiesprogram/components/form/container'}"></div>-->
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.title, classAppend='cmp-text'}"></sly>

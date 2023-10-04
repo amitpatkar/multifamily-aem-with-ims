@@ -1,0 +1,229 @@
+.cmp-get-in-touch {
+    background-color: $black-100;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    @include breakpoint-up(desktop) {
+        padding: 120px 14.5%;
+        grid-template-columns: 38% 14% 48%;
+        grid-template-rows: auto;
+    }
+    &__contents {
+        color: $white-100;
+        grid-column: 1;
+        grid-row: 1/2;
+        padding: 0 $padding-small;
+        @include breakpoint-up(desktop) {
+            grid-column: 1/2;
+            grid-column: 1;
+            padding: 0;
+        }
+    }
+
+    &__title {
+        padding: 60px 0 30px;
+        @include large-title;
+    }
+    &__copy {
+        @include body-text;
+        margin-bottom: 30px;
+    }
+    .contact-info {
+        &--office {
+            margin-top: 30px;
+            p {
+                text-transform: none;
+                margin-top: 10px;
+            }
+        }
+    }
+    &__copy,
+    .contact-info {
+        @include breakpoint-down(tablet) {
+            display: none;
+        }
+    }
+
+
+    &__form-area {
+        background-color: $white-100;
+        color: $black-100;
+        grid-column: 1;
+        grid-row: 2/3;
+        padding: 45px 0 60px;
+        @include breakpoint-up(desktop) {
+            grid-column: 3/4;
+            grid-row: 1;
+            padding: 45px 0 60px;
+        }
+        .cmp-form {
+            margin: 0;
+            &>.text:nth-child(4) {
+                .cmp-form-text{
+                    padding-bottom: 30px;
+                }
+            }
+        }
+        .text.half-width {
+            display: inline-block;
+            width: 49.2%;
+            &:nth-of-type(odd) {
+                .cmp-form-text {
+                    padding-right: 2%;
+                    padding-left: $padding-small;
+                    @include breakpoint-up(desktop) {
+                        padding-left: 2 * $padding-large;
+                    }
+                }
+                
+            }
+            &:nth-of-type(even) {
+                .cmp-form-text {
+                    padding-left: 2%;
+                    padding-right: $padding-small;
+                    @include breakpoint-up(desktop) {
+                        padding-right: 2 * $padding-large;
+                    }
+                }
+                
+            }
+        }
+
+        .cmp-form-text {
+            padding: 15px $padding-small;
+            @include breakpoint-up(desktop) {
+                padding: 15px $padding-large;
+            }
+            label {
+                display: block;
+                margin-bottom: 10px;
+                @include form-label;
+            }
+            &__text{
+                width: 100%;
+                height: 50px;
+                padding: 12px;
+                border-radius: 6px;
+                border: 2px solid transparent;
+                background-color: $black-5; 
+                @include form-input;
+                color: $black-100;
+                @include breakpoint-up(desktop) {
+                    padding: 12px 25px;
+                }
+                &.invalid {
+                    background-color: $error-5; 
+                    border-color: $error-100;
+                }
+            }
+            input:placeholder-shown {
+                color: $black-50 !important;
+                @include form-placeholder;
+            }
+            .cmp-form-error-message {
+                margin: 0;
+                margin-top: 3px;
+                padding-left: 12px;
+                @include breakpoint-up(desktop) {
+                    padding-left: 25px;
+                }
+            }
+        }
+        .cmp-options {
+            padding: 15px $padding-small;
+            @include breakpoint-up(desktop) {
+                padding: 15px $padding-large;
+            }
+            &.move-in-date {
+                padding-top: 30px;
+                border-top: 2px solid $black-100;
+            }
+            &.home-type {
+                fieldset {
+                    .checkbox-item {
+                        width: 25%;
+                        margin-bottom: 10px;
+                        @include breakpoint-up(desktop) {
+                            width: 33.33%;
+                        }
+                    }
+                    .checkbox-item:nth-of-type(3) {
+                        @include breakpoint-down(tablet) {
+                            margin-right: 50px;
+                        }
+                    }
+                    .checkbox-item:nth-of-type(n+4) {
+                        @include breakpoint-up(desktop) {
+                            width: 50%;
+                        }
+
+                    }
+                }
+            }
+        }
+        .cmp-form-button {
+            margin-top: 20px;
+            margin-left: $padding-small;
+            @include breakpoint-up(desktop) {
+                margin-left: $padding-large;
+            }
+        }
+        .cmp-form-error-message {
+            @include form-error-text;
+        }
+        #get_in_touch_error {
+            padding: 10px $padding-small;
+            @include breakpoint-up(desktop) {
+                padding: 10px $padding-large;
+            }
+        }
+    }
+
+    &__greeting {
+        padding: $padding-small;
+        @include breakpoint-up(desktop) {
+            padding: 60px $padding-large 15px;
+        }
+        img {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 15px;
+            @include breakpoint-up(desktop) {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        p {
+            @include body-text;
+        }
+
+    }
+    &__confirmation {
+        padding: 30px $padding-small;
+        @include breakpoint-up(desktop) {
+            padding: 15px $padding-large 30px;
+        }
+        h2, h3, h4, h5, h6 {
+            @include large-title;
+            margin-bottom: 20px;
+        }
+        p {
+            @include body-text;
+        }
+    }
+    &__cta {
+        padding: 30px $padding-small;
+        @include breakpoint-up(desktop) {
+            padding: 30px $padding-large 60px;
+        }
+        p + p {
+            margin-top: 12px;
+        }
+    }
+    &__spacer {
+        height: 2px;
+        width: 100%;
+        background-color: $black-100;
+    }
+}

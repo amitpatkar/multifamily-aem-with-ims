@@ -1,0 +1,9 @@
+
+@import 'mixins';
+@import 'variables';
+@import 'fonts';
+@import 'base';
+@import 'modal';
+@import '../components/**/*.scss';
+/* @import './styles/*.scss'; Commented by Amit*/
+@import './themes/*.scss'; /* Added by Amit as an experiement */
